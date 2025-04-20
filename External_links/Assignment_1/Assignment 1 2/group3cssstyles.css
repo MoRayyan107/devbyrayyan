@@ -1,0 +1,96 @@
+body {font-family: Arial, Helvetica, sans-serif;
+    font-size: 120%}
+   
+   .header{
+       font-size:300%;
+       background-color:#2c4e2a;
+       overflow:auto;
+       display: block;
+       color:#c9c0aa;
+   }
+       
+   p{margin-right: 5%}
+
+    .heading{text-align: center;
+    margin-top:0;
+    margin-bottom:0;	    
+    }
+   
+   a{text-decoration:none;
+    color:black}
+   
+   nav{background-color:#826e5e;}
+   
+   a:hover{color:#e4e4e4;}
+   
+   .mainbody a:hover{color:#2c4e2a;
+    font-weight:bold;} 
+
+   ul.nav{text-align: center;
+    margin: 0;
+    float:center;
+    overflow: hidden;}
+   
+    li.links{ box-align:center;
+        list-style-type: none;
+        overflow: hidden;
+        display:inline-block;
+        text-align:center;
+        padding:1% 0.5%;
+        margin-top:0.3%;
+        background-color:#927b67;
+        text-decoration: none}
+    li.links:hover{background-color:#726153; color:#e4e4e4}
+   
+    .mainbody{margin-left:5%;
+        margin-top:10px
+    }
+   
+   h1{background-color:#F0E8D3;
+   max-width: 80%;
+    }
+   
+   img{max-width:100%}
+
+   .Left{width:50%;
+    float:left}
+    .Right{margin-left:50%;
+    }
+    .Education{
+    }
+    .Oceans{
+    }
+    .Renewable{
+    }
+    .Simulations{
+    }
+    
+    .sideimages{margin-top:10px;
+        display:block;
+        float:right;
+        margin-right:5%;
+        max-width:35%;
+        overflow:hidden;
+        background-color:#ffff34
+        }
+    
+    .footer{text-decoration: none;
+        display:inline-block;
+        padding:10px 10px;
+        background-color:#54a875;
+        color:black;
+        margin-left:5%
+        }
+        .footer:hover{background-color:#678f76; color:#e4e4e4}
+
+    .nextpage{text-decoration: none;
+        display:block;
+        padding:10px 10px;
+        background-color:#54a875;
+        color:black;
+        margin-left:5%;
+        float:right;
+        margin-right: 5%
+        }
+       .nextpage:hover{background-color:#7aa77a; color:#e4e4e4
+}

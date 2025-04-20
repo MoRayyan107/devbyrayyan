@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale= 1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="Stylesheet.css">
+    <link rel="icon" href="Images/360_F_565796170_C4fuivt1qGdDtTGKVpQzcYx7p8PzXEGI.jpg">
+    <script src="https://kit.fontawesome.com/f9336084cb.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div id="header">
+      <div class = "container">
+        <nav>
+          <img src="Images/Logo.png" class = "logo">
+          <div class = "Outer-Menu">
+            <ul id="Menu">
+              <li><a href="#header" onclick="Home()">Home</a></li>
+              <li><a href="#about" onclick="About()">About</a></li>
+              <li><a href="#MyProjects" onclick="Projects()">Projects</a></li>
+              <li><a href="#Contact" onclick="Contact()">Contact</a></li>
+              <i class="fa-solid fa-xmark fa-lg" onclick="closeMenu()"></i>
+            </ul> <!-- end of unordered list -->
+            <i class="fa-solid fa-bars fa-lg" onclick="openMenu()"></i>
+          </div> <!-- Outer Menu Ends -->
+        </nav>  
+        <div class="header txt">
+          <p>Hi, I'm <strong>Mohammad Rayyan Adhoni</strong></p>
+          <h1>2nd Year <br><span id="typing-text">MEng<br>Computer Science</span><br>at University of Strathclyde</h1>
+        </div>    <!-- header.txt div ends here -->
+      </div>      <!-- container div ends here -->
+    </div>        <!-- header div ends here -->
+
+<!---------------------------------- About ------------------------------------------>
+    <div id="about">
+      <div class = "container">
+        <div class="row">
+          <div class="about-col-1"> 
+            <div class="scroll-animate">
+              <img src="Images/IMG_9570__1_-removebg.png" alt = "Profile Image">
+            </div>   
+          </div>  <!-- About-col-1 div ends here -->
+          <div class="about-col-2">
+            <h1 class="sub-about-me">About Me</h1>
+            <p class="about-me-part1">
+              Hello World! I'm Mohammad Rayyan Adhoni, a 19-year-old student pursuing Master of Engineering for Computer Science at University of Strathclyde in Glasgow, Scotland.
+              I'm originally from Abu Dhabi, UAE. My academic journey began from Gems United Indian School, and started to have interest on computer science.
+              As i have a little bit of experience on Web Page Development, This is the best I can make.
+            </p><br>
+            <p class="about-me-part2">
+              My current area of focus is back-end dev, but I have collaborated with a group on a website design project. this has given me a bit experience on front-end dev, 
+              which have also improved my coding, problem-solving, and collaborative abilities. Also I have done a solo project on Car dealership on Python and MySQL, this was done 
+              during my High School year. I have a passion for learning and I am always eager to expand my knowledge. I have recently joined a coding bootcamp to further my skills.
+            </p><br>
+            <p class="about-me-part3">
+              When I'm not studying or working on projects, you can find me on instagram, or either i might be playing some video games. <b>Welcome to my Webpage!!</b>
+            </p>
+            <div class="tab">
+              <p class="links active_type" onclick="opentab('Education')">Education</p>
+              <p class="links" onclick="opentab('Skills')">Skills</p>
+            </div>  <!-- tabs ends here -->
+<!------------- Education contents ------------------->   
+            <div class="tab-contents Active" id ="Education">
+              <div class="class-contents">
+
+                <div class="box">
+                  <h4>2020 - 2021</h4>
+                  <h3>Middle School Degree</h3>
+                  <p>From: Gems United Indian School, Abu Dhabi, UAE.</p>
+                  <p>Successfully completed middle school with a strong foundation in Science and Mathematics.
+                  </p>
+                </div>
+
+                <div class="box">
+                  <h4>2022 - 2023</h4>
+                  <h3>High Sch  ool Degree</h3>
+                  <p>From: Gems United Indian School, Abu Dhabi, UAE.</p>
+                  <p>Successfully completed High School with a strong academic foundation in Science, 
+                    Mathematics, and Computer Science, including successful project development and practical application of knowledge.
+                  </p>
+                </div> 
+                  
+                <div class="box">
+                  <h4>2023 - present</h4>
+                  <h3>Masters of Engineering Degree</h3>
+                  <p>From: University of Strathclyde, Glasgow, Scotland.</p>
+   
+                  <p>Lorem </p>
+                </div >
+              </div>
+            </div>  
+
+<!-------------------- Skills Contents -------------->
+            <div class="tab-contents" id="Skills">
+              <div class="skills">
+                <li>
+                  <i class="fa-brands fa-java fa-2xl"></i><h3>Java - 45% (ON PROGRESS...)</h3>
+                  <span class="Bar"><span class="Java"></span></span>
+                </li>
+                <li>
+                  <i class="fa-brands fa-python fa-2xl"></i><h3>Python - 55%</h3>
+                  <span class="Bar"><span class="Python"></span></span>
+                </li>
+                <li>
+                  <i class="fa-brands fa-java fa-2xl"></i><h3>DSA - 30% (ON PROGRESS...)</h3>
+                  <span class="Bar"><span class="DSA"></span></span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-c fa-2xl"></i>
+                  <h3>C - 25%  (ON PROGRESS...)</h3>
+                  <span class="Bar"><span class="C"></span></span>
+                </li>
+              </div>
+            </div>  <!-- tabs contents ends here -->
+          </div>    <!-- About-col-2 div ends here -->
+        </div>      <!-- row div end here --> 
+      </div>        <!-- container div ends here -->
+    </div>          <!-- about div ends here -->
+
+<!---------------------------------- Projects ------------------------------------------>    
+    <div id="MyProjects">
+      <div class="container">
+        <h1 class="sub-about-me">My Projects</h1>
+        <div class="project-lists">
+          <div>
+            <i class="fa-brands fa-python fa-2xl" style="color: #FFD43B;"></i>
+            <h2>Python Project</h2>
+            <p>This Python program manages a car dealership, 
+              offering functions for customers and employees. 
+              Customers can browse cars and make purchases, 
+              while employees can perform database operations. 
+              The system includes interactive interfaces and ASCII 
+              art visuals, enhancing user experience.</p>
+            <a href="/Main_Webpage/PYTHONproject.html" >View Project</a>
+          </div>
+          <div>
+            <i class="fa-brands fa-html5 fa-2xl" style="color: #74C0FC;"></i>
+            <h2>First HTML Project</h2>
+            <p>This was my First ever <b>HTML group project</b>.</p>
+            <p>We were given a task on various topics, and chose the topic <b>Computing and climate action </b>and most probably working in Laptop screen size.</p>
+            <a href="External_links/Assignment_1/Assignment 1 2/homepage.html" >View Project</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-database fa-2xl" style="color: #6000f0;"></i>
+            <h2>SQL Project</h2>
+            <p>This MySQL project integrates python project, the SQL has queries to manage a car dealership database, allowing operations such as displaying available cars, editing details, grouping records, and deleting entries.</p>
+            <a href="Main_Webpage/SQL.html" >View Project</a>
+          </div>
+        </div>      <!-- sub-about-me ends here -->
+      </div>        <!-- Container ends here    -->
+    </div>          <!-- MyProjects ends here   -->
+<!---------------------------------- Contact ------------------------------------------>
+    <div id="Contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-about-me">Contact Me</h1>
+            <p><i class="fa-solid fa-envelope fa-sm"></i>Rayyanadhoni107@gmail.com</p>
+            <p><i class="fa-solid fa-phone fa-sm"></i>+44 7587 480115</p>
+            <div class="Social_Media">
+              <a href="https://wa.me/447587480115" target="_blank"><i class="fa-brands fa-whatsapp fa-2xl"></i></a>
+              <a href="https://discord.com/users/1204825531422478420" target="_blank"><i class="fa-brands fa-discord fa-2xl"></i></a>
+              <a href="https://www.instagram.com/rayyan.a_10/" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+              <a href="https://github.com/MoRayyan107/MyRepo/tree/main" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
+              <a href="https://www.linkedin.com/in/mohammad-rayyan-adhoni-33074b31b/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+            </div>
+          </div>    <!-- Contact-left ends here  -->
+<!--          <div class="contact-right">
+            <h3>Currently Not Working.......</h3>
+            <form id="contactForm" name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required>
+              <input type="email" name="Email" placeholder="Your Email" required>
+              <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+              <button type="button" class="btn btn1" onclick="submitForm()">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>     Contact-right ends here -->
+        </div>      <!-- Row ends here           -->
+      </div>        <!-- Container ends here     -->
+    </div>          <!-- Contact ends here       -->
+    <script src = "MainWebpage.js"></script>
+  </body>
+</html>

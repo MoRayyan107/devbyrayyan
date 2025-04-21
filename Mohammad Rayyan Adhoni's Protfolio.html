@@ -29,6 +29,9 @@
           <p>Hi, I'm <strong>Mohammad Rayyan Adhoni</strong></p>
           <h1>2nd Year <br><span id="typing-text">MEng<br>Computer Science</span><br>at University of Strathclyde</h1>
         </div>    <!-- header.txt div ends here -->
+        <div class="scroll-down">
+          <span class="dot"></span>
+        </div>
       </div>      <!-- container div ends here -->
     </div>        <!-- header div ends here -->
 
@@ -54,7 +57,7 @@
               during my High School year. I have a passion for learning and I am always eager to expand my knowledge. I have recently joined a coding bootcamp to further my skills.
             </p><br>
             <p class="about-me-part3">
-              When I'm not studying or working on projects, you can find me on instagram, or either i might be playing some video games. <b>Welcome to my Webpage!!</b>
+              When I'm not studying or working on projects, you can find me on instagram, or either i might be playing some video games. <b class="neon-text">Welcome to my Webpage!!</b>
             </p>
             <div class="tab">
               <p class="links active_type" onclick="opentab('Education')">Education</p>
@@ -85,8 +88,7 @@
                   <h4>2023 - present</h4>
                   <h3>Masters of Engineering Degree</h3>
                   <p>From: University of Strathclyde, Glasgow, Scotland.</p>
-   
-                  <p>Lorem </p>
+                  <p> </p>
                 </div >
               </div>
             </div>  
@@ -124,35 +126,35 @@
         <h1 class="sub-about-me">My Projects</h1>
         <div class="project-lists">
           <div>
-            <i class="fa-brands fa-python fa-2xl" style="color: #FFD43B;"></i>
-            <h2>Python Project</h2>
-            <p>This Python program manages a car dealership, 
-              offering functions for customers and employees. 
-              Customers can browse cars and make purchases, 
-              while employees can perform database operations. 
-              The system includes interactive interfaces and ASCII 
-              art visuals, enhancing user experience.</p>
-            <a href="/Main_Webpage/PYTHONproject.html" >View Project</a>
+            <img src="Images/java_logo.png" alt="java Logo" style="width: 75px; margin-bottom: 10px;">
+            <h2>ScotBank Project</h2>
+            <p><span style="font-weight: bold; color: #ffffff; font-size: 24px;">My First Ever Huge Project:</span></p><br>
+            <p class = "project-paragraph">This was my first large-scale project, developed in collaboration with JPMorgan. Through this project, 
+              I learned to work with various Agile methodologies such as Scrum, and gained hands-on experience with RESTful APIs 
+              and CI/CD pipelines. The project involved creating a secure banking system that stores user information via JPMorgan's provided API. 
+              A key feature is the secure user login system, ensuring robust protection of sensitive data. This project significantly enhanced my technical skills 
+              and understanding of industry-standard practices.
+            </p>
+            <a href="https://github.com/MoRayyan107/ScotBank" >View Project</a>
           </div>
+          
           <div>
-            <i class="fa-brands fa-html5 fa-2xl" style="color: #74C0FC;"></i>
-            <h2>First HTML Project</h2>
-            <p>This was my First ever <b>HTML group project</b>.</p>
-            <p>We were given a task on various topics, and chose the topic <b>Computing and climate action </b>and most probably working in Laptop screen size.</p>
-            <a href="External_links/Assignment_1/Assignment 1 2/homepage.html" >View Project</a>
-          </div>
-          <div>
-            <i class="fa-solid fa-database fa-2xl" style="color: #6000f0;"></i>
-            <h2>SQL Project</h2>
-            <p>This MySQL project integrates python project, the SQL has queries to manage a car dealership database, allowing operations such as displaying available cars, editing details, grouping records, and deleting entries.</p>
-            <a href="Main_Webpage/SQL.html" >View Project</a>
-          </div>
+            <img src="Images/C_logo.png" alt="C Logo" style="width: 75px; margin-bottom: 10px;">
+            <h2>Custom Unix-Style Shell</h2><br>
+            <p class = "project-paragraph">  SimpleShell is a lightweight, Unix-style command-line shell developed entirely in C. 
+              It supports built-in commands like <code>cd</code>, <code>pwd</code>, <code>getpath</code>, <code>setpath</code>, and <code>history</code>, 
+              as well as external command execution via <code>fork()</code> and <code>execvp()</code>. The shell features a persistent command history system, 
+              an alias manager with support for saving/loading from file, and clean modular architecture using separate header and source files. Built for educational and practical learning, 
+              this project demonstrates strong understanding of system-level programming, memory management, process handling, and modular C design.
+            </p>
+            <a href="https://github.com/MoRayyan107/SimpleShell">View Project</a>
+          </div>          
         </div>      <!-- sub-about-me ends here -->
       </div>        <!-- Container ends here    -->
     </div>          <!-- MyProjects ends here   -->
 <!---------------------------------- Contact ------------------------------------------>
     <div id="Contact">
-      <div class="container">
+      <div class="contact-container">
         <div class="row">
           <div class="contact-left">
             <h1 class="sub-about-me">Contact Me</h1>
@@ -162,20 +164,10 @@
               <a href="https://wa.me/447587480115" target="_blank"><i class="fa-brands fa-whatsapp fa-2xl"></i></a>
               <a href="https://discord.com/users/1204825531422478420" target="_blank"><i class="fa-brands fa-discord fa-2xl"></i></a>
               <a href="https://www.instagram.com/rayyan.a_10/" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-              <a href="https://github.com/MoRayyan107/MyRepo/tree/main" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
-              <a href="https://www.linkedin.com/in/mohammad-rayyan-adhoni-33074b31b/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+              <a href="https://github.com/MoRayyan107" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
+              <a href="https://www.linkedin.com/in/rayyan-adhoni-33074b31b/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
             </div>
-          </div>    <!-- Contact-left ends here  -->
-<!--          <div class="contact-right">
-            <h3>Currently Not Working.......</h3>
-            <form id="contactForm" name="submit-to-google-sheet">
-              <input type="text" name="Name" placeholder="Your Name" required>
-              <input type="email" name="Email" placeholder="Your Email" required>
-              <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
-              <button type="button" class="btn btn1" onclick="submitForm()">Submit</button>
-            </form>
-            <span id="msg"></span>
-          </div>     Contact-right ends here -->
+          </div>    
         </div>      <!-- Row ends here           -->
       </div>        <!-- Container ends here     -->
     </div>          <!-- Contact ends here       -->

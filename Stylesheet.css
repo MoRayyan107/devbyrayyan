@@ -7,20 +7,22 @@ html{
 * {
   margin: 0;
   padding: 0;
-  font-family: "Conolas", "Lucida Grande", "Lucida Sans Unicode";
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   box-sizing: border-box;
 }
 
 
 body {
   background-color: #000000;
-  color: #ffffff;
+  color: #ffffff; /* Lighter than #ccc, more readable */
+  text-shadow: 0 0 1px #1a1a1a; /* Less blur */
+  font-weight: 300;
 }
 
 #header {
-  width: 100%; 
+  width: 100%;
   height: 100vh;
-  background-image: url(Images/IMG_2899.jpg);
+  background-image: url(Images/Background-pica.png);
   background-size: cover;
   background-position: center;
 }
@@ -68,7 +70,7 @@ nav ul li a::after {
   content: '';
   width: 0;
   height: 2px;
-  background: #1515f8;
+  background: #00ffff;
   position: absolute;
   left: 0;
   bottom: -2px;
@@ -76,7 +78,8 @@ nav ul li a::after {
 }
 
 nav ul li a:hover {
-  color: #2e8cff;
+  color: #00ffff;
+  text-shadow: 0 0 6px #00ffff;
 }
 
 nav ul li a:hover::after {
@@ -89,21 +92,62 @@ nav ul li a:hover::after {
   text-align: left;
 }
 
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 40px;
+  border: 2px solid #00ffff;
+  border-radius: 25px;
+  box-shadow: 0 0 6px #00ffff;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translate(-50%, 20px);
+  }
+  50% {
+    transform: translate(-50%, 10px);
+  }
+}
+
+.scroll-down .dot {
+  display: block;
+  width: 4px;
+  height: 4px;
+  background: #00ffff;
+  margin: 10px auto;
+  border-radius: 50%;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 1; }
+}
+
+
 .header.txt p {
-  color: #ffffff;
-  font-weight: 1000;
-  font-size: 24px;
+  color: #f2f2f2;
+  text-shadow: 0 0 2px #111111;
+  font-weight: 500;
 }
 
 .header.txt h1 {
-  font-size: 50px;
-  margin-top: 20px;
-  line-height: 1.2;
+  color: #ffffff;
+  text-shadow: 0 0 4px #000000;
 }
 
+
 .header.txt span {
-  color: #ff0000;
+  color: #4fc3f7; /* Soft electric blue */
+  text-shadow: 0 0 3px #244b59;
+  font-weight: 600;
 }
+
 #typing-text {
   display: inline-block;
   white-space: nowrap;
@@ -148,13 +192,22 @@ nav ul li a:hover::after {
 
 .about-col-2 {
   flex-basis: 60%;
+  font-size: large;
+  font-family:'Times New Roman', Times, serif;
 }
 
 .sub-about-me {
   font-size: 60px;
   font-weight: 600;
+  color: #4fc3f7; 
+  text-shadow: 0 0 4px rgba(79, 195, 247, 0.5);
   text-decoration: underline;
-  color: #db0b0b;
+}
+
+.neon-text {
+  color: #00ffe5;
+  text-shadow: 0 0 5px #225e58, 0 0 15px #00ffe5;
+  font-weight: bold;
 }
 
 .scroll-animate {
@@ -286,6 +339,11 @@ nav ul li a:hover::after {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 40px;
   margin-top: 50px;
+}
+
+.project-paragraph{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 15px;
 }
 
 .project-lists div {
@@ -440,6 +498,10 @@ nav ul li a:hover::after {
 }
 
 /* ------------------ Contact ------------------ */
+.contact-container{
+  padding-left: 10%;
+  padding-bottom: 5%;
+}
 .contact-left {
   flex-basis: 35%;
 }
@@ -544,10 +606,11 @@ nav .fa-solid {
   nav{
     height: 75px;
   }
+  
   #header {
-    background-image: url(Images/IMG_2899_small.jpg);
+    background-image: url(Images/Background-pica.png);
     margin-left: 0px;
-    height: 80vh;
+    height: 90vh;
   }
 
   .logo{
@@ -560,19 +623,24 @@ nav .fa-solid {
     margin-top: 33%;
     font-size: 16px;
   }
-  .header.txt p{
+  .header.txt p {
     font-size: 21px;
-    color: #ffffff;
+    color: #f2f2f2;
+    text-shadow: 0 0 2px #111111;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
+  
 
   .header.txt h1 {
     font-size: 30px;
-  }
-  .header.txt h1 span{
-    color: rgb(255, 0, 0);
-    font-weight: bolder;
-  }
+    color: #ffffff;
+    text-shadow: 0 0 4px #000000;
+  }  
+  .header.txt span {
+    color: #4fc3f7;
+    text-shadow: 0 0 3px #244b59;
+    font-weight: 600;
+  }  
   .about-col-1 {
     width: 100%;
     height: 100%;
@@ -585,9 +653,10 @@ nav .fa-solid {
     display: block;
     font-size: 25px;
   }
-  nav ul{
-    /*background: linear-gradient(300deg, rgb(3, 9, 174), rgb(0, 0, 0));*/
-    background-color: #696969;
+
+  nav ul {
+    background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%);
+    box-shadow: -5px 0 10px rgba(0, 255, 255, 0.08);
     position: fixed;
     top: 0;
     right: -150px;
@@ -597,10 +666,12 @@ nav .fa-solid {
     z-index: 2;
     transition: right 1s;
   }
+  
   nav ul li{
     display: block;
     margin: 25px;
   }
+  
   nav .fa-solid.fa-xmark.fa-lg{
     position: absolute;
     top: 5%;
@@ -673,7 +744,6 @@ nav .fa-solid {
     margin-top: 30px;
     flex-basis: 100%;
   }
-  
 
   .skills{
     width: auto;

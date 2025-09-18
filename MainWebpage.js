@@ -39,7 +39,7 @@ function openMenu() {
 }
 
 function closeMenu() {
-  menu.style.right = '-200px';
+  menu.style.right = '-300px';
 }
 
 
@@ -80,6 +80,25 @@ document.addEventListener("DOMContentLoaded", function() {
   type();
 });
 
+// --- NEW: Add this block for Tappable Project Cards on Mobile ---
+document.addEventListener('DOMContentLoaded', () => {
+    const projects = document.querySelectorAll('.project');
+
+    projects.forEach(project => {
+        project.addEventListener('click', () => {
+            // This allows the user to tap the same card to close it
+            project.classList.toggle('tapped');
+            
+            // This closes other open cards when you tap a new one
+            projects.forEach(otherProject => {
+                if (otherProject !== project) {
+                    otherProject.classList.remove('tapped');
+                }
+            });
+        });
+    });
+});
+
 
 // --- Fade-in Animation on Scroll ---
 document.addEventListener("DOMContentLoaded", () => {
@@ -100,4 +119,13 @@ document.addEventListener("DOMContentLoaded", () => {
   sections.forEach(section => {
     observer.observe(section);
   });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('#nav-menu li a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            closeMenu();
+        });
+    });
 });

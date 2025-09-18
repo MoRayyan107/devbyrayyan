@@ -46,7 +46,7 @@ function closeMenu() {
 // --- Dynamic Typewriter Effect ---
 document.addEventListener("DOMContentLoaded", function() {
   const typingElement = document.getElementById("typing-text");
-  const words = ["Computer Science", "Back-End Development", "Software Engineering"];
+  const words = ["Computer Science Student", "Back-End Development", "Software Engineer","Web Development"];
   let wordIndex = 0;
   let charIndex = 0;
   let isDeleting = false;

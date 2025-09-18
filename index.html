@@ -1,199 +1,201 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <meta property="og:title" content="Mohammad Rayyan | Developer Portfolio">
     <meta property="og:description" content="Explore my portfolio showcasing projects, skills, and background in computer science.">
     <meta property="og:image" content="https://raw.githubusercontent.com/MoRayyan107/devbyrayyan/main/Images/preview.png">
     <meta property="og:url" content="https://morayyan107.github.io/devbyrayyan/">
     <meta name="twitter:card" content="summary_large_image">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale= 1.0">
-    <title>Personal Portfolio</title>
+
+    <title>Mohammad Rayyan | Portfolio</title>
     <link rel="stylesheet" href="Stylesheet.css">
     <link rel="icon" href="Images/R.jpg">
     <script src="https://kit.fontawesome.com/f9336084cb.js" crossorigin="anonymous"></script>
-  </head>
+</head>
 
-  <body>
+<body>
     <div id="header">
-      <div class = "container">
-        <nav>
-          <img src="Images/Logo.png" class = "logo">
-          <div class = "Outer-Menu">
-            <ul id="Menu">
-              <li><a href="#header" onclick="Home()">Home</a></li>
-              <li><a href="#about" onclick="About()">About</a></li>
-              <li><a href="#MyProjects" onclick="Projects()">Projects</a></li>
-              <li><a href="#Contact" onclick="Contact()">Contact</a></li>
-              <i class="fa-solid fa-xmark fa-lg" onclick="closeMenu()"></i>
-            </ul> <!-- end of unordered list -->
-            <i class="fa-solid fa-bars fa-lg" onclick="openMenu()"></i>
-          </div> <!-- Outer Menu Ends -->
-        </nav>  
-        <div class="header txt">
-          <p>Hi, I'm <strong>Mohammad Rayyan Adhoni</strong></p>
-          <h1>2nd Year <br><span id="typing-text">MEng<br>Computer Science</span><br>at University of Strathclyde</h1>
-        </div>    <!-- header.txt div ends here -->
-        <div class="scroll-down">
-          <span class="dot"></span>
-        </div>
-      </div>      <!-- container div ends here -->
-    </div>        <!-- header div ends here -->
-
-<!---------------------------------- About ------------------------------------------>
-    <div id="about">
-      <div class = "container">
-        <div class="row">
-          <div class="about-col-1"> 
-            <div class="scroll-animate">
-              <img src="Images/IMG_9570__1_-removebg.png" alt = "Profile Image">
-            </div>   
-          </div>  <!-- About-col-1 div ends here -->
-          <div class="about-col-2">
-            <h1 class="sub-about-me">About Me</h1>
-            <p class="about-me-part1">
-              Hello World! I'm Mohammad Rayyan Adhoni, a 19-year-old student pursuing a Master of Engineering in Computer Science at the 
-              University of Strathclyde in Glasgow, Scotland. I'm originally from Abu Dhabi, UAE. My academic journey began at Gems United 
-              Indian School, where I developed an interest in computer science. I’ve created this website to be an overview of my computer science journey.  
-            </p><br>
-            <p class="about-me-part2">
-              My current area of focus is back-end developer, but I have some experience in front-end  as well due to a group collaboration 
-              on a website design project which strengthened my coding, problem-solving, and collaboration skills. I also completed a 
-              solo project on Car dealerships on Python and MySQL when I was in high school. I am passionate about learning and expanding 
-              my knowledge and skill sets, which is why I recently joined a coding bootcamp to supplement my studies and projects.
-            </p><br>
-            <p class="about-me-part3">
-              When I'm not studying or working on projects, you can find me on instagram or playing video games. 
-              <br><br><b class="neon-text">Welcome to my Webpage!!</b>
-            </p>
-            <div class="tab">
-              <p class="links active_type" onclick="opentab('Education')">Education</p>
-              <p class="links" onclick="opentab('Skills')">Skills</p>
-            </div>  <!-- tabs ends here -->
-<!------------- Education contents ------------------->   
-            <div class="tab-contents Active" id ="Education">
-              <div class="class-contents">
-
-                <div class="box">
-                  <h4>2020 - 2021</h4>
-                  <h3>Middle School Degree</h3>
-                  <p>From: Gems United Indian School, Abu Dhabi, UAE.</p>
-                  <p>Successfully completed middle school with a strong foundation in Science and Mathematics.
-                  </p>
-                </div>
-
-                <div class="box">
-                  <h4>2022 - 2023</h4>
-                  <h3>High School Degree</h3>
-                  <p>From: Gems United Indian School, Abu Dhabi, UAE.</p>
-                  <p>Successfully completed High School with a strong academic foundation in Science, 
-                    Mathematics, and Computer Science, including successful project development and practical application of knowledge.
-                  </p>
-                </div> 
-                  
-                <div class="box">
-                  <h4>2023 - present</h4>
-                  <h3>Masters of Engineering Degree</h3>
-                  <p>From: University of Strathclyde, Glasgow, Scotland.</p>
-                  <p>Working toward my MEng in Computer Science at the University of Strathclyde, with an emphasis on practical 
-                    software engineering and system architecture. I'm passionate about creating efficient, 
-                    scalable solutions and am actively building projects to grow as a professional developer.
-                  </p>
-                </div >
-              </div>
-            </div>  
-
-<!-------------------- Skills Contents -------------->
-            <div class="tab-contents" id="Skills">
-              <div class="skills">
-                <h3 style="color: #ff0000;">Will be updated!!</h3>
-                <li>
-                  <i class="fa-brands fa-java fa-2xl"></i><h3>Java - 45% (ON PROGRESS...)</h3>
-                  <span class="Bar"><span class="Java"></span></span>
-                </li>
-                <li>
-                  <i class="fa-brands fa-python fa-2xl"></i><h3>Python - 55%</h3>
-                  <span class="Bar"><span class="Python"></span></span>
-                </li>
-                <li>
-                  <i class="fa-brands fa-java fa-2xl"></i><h3>DSA - 30% (ON PROGRESS...)</h3>
-                  <span class="Bar"><span class="DSA"></span></span>
-                </li>
-                <li>
-                  <i class="fa-solid fa-c fa-2xl"></i>
-                  <h3>C - 25%  (ON PROGRESS...)</h3>
-                  <span class="Bar"><span class="C"></span></span>
-                </li>
-              </div>
-            </div>  <!-- tabs contents ends here -->
-          </div>    <!-- About-col-2 div ends here -->
-        </div>      <!-- row div end here --> 
-      </div>        <!-- container div ends here -->
-    </div>          <!-- about div ends here -->
-
-<!---------------------------------- Projects ------------------------------------------>    
-    <div id="MyProjects">
-      <div class="container">
-        <h1 class="sub-about-me">My Projects</h1>
-        <div class="project-lists">
-          <div>
-            <img src="Images/java_logo.png" alt="java Logo" style="width: 75px; margin-bottom: 10px;">
-            <h2>ScotBank Project</h2>
-            <p><span style="font-weight: bold; color: #ffffff; font-size: 24px;">My First Ever Huge Project:</span></p><br>
-            <p class = "project-paragraph">This was my first large-scale project, developed in collaboration with JPMorgan. Through this project, 
-              I learned to work with various Agile methodologies such as Scrum, and gained hands-on experience with RESTful APIs 
-              and CI/CD pipelines. The project involved creating a secure banking system that stores user information via JPMorgan's provided API. 
-              A key feature is the secure user login system, ensuring robust protection of sensitive data. This project significantly enhanced my technical skills 
-              and understanding of industry-standard practices.
-            </p>
-            <a href="https://github.com/MoRayyan107/ScotBank" >View Project</a>
-          </div>
-          
-          <div>
-            <img src="Images/C_logo.png" alt="C Logo" style="width: 75px; margin-bottom: 10px;">
-            <h2>Custom Unix-Style Shell</h2><br>
-            <p class = "project-paragraph">  SimpleShell is a lightweight, Unix-style command-line shell developed entirely in C. 
-              It supports built-in commands like <code>cd</code>, <code>pwd</code>, <code>getpath</code>, <code>setpath</code>, and <code>history</code>, 
-              as well as external command execution via <code>fork()</code> and <code>execvp()</code>. The shell features a persistent command history system, 
-              an alias manager with support for saving/loading from file, and clean modular architecture using separate header and source files. Built for educational and practical learning, 
-              this project demonstrates strong understanding of system-level programming, memory management, process handling, and modular C design.
-            </p>
-            <a href="https://github.com/MoRayyan107/SimpleShell">View Project</a>
-          </div>
-          <div>
-            <img src="Images/java_logo.png" alt="java Logo" style="width: 75px; margin-bottom: 10px;">
-            <h2>Task Manager API</h2><br>
-            <p><span style="font-weight: bold; color: #ffffff; font-size: 24px;">(implementing user login with JWT tokens)</span></p><br>
-            <p class = "project-paragraph">This project is a simple yet functional Task Manager API built using Java and Spring Boot. 
-              It allows users to perform full CRUD (Create, Read, Update, Delete) operations on tasks via RESTful endpoints. 
-              The API supports sorting, pagination, and data validation, making it scalable and user-friendly. With a clean 
-              architecture using a controller-service-repository pattern, this project is ideal for showcasing backend development skills, 
-              Spring Data JPA usage, and REST API best practices. It's perfect for beginners aiming to build real-world Java backend 
-              applications or preparing for full-stack integration
-            </p>
-            <a href="https://github.com/MoRayyan107/TaskManagerAPI">View Project</a>
-          </div>             
-        </div>      <!-- sub-about-me ends here -->
-      </div>        <!-- Container ends here    -->
-    </div>          <!-- MyProjects ends here   -->
-<!---------------------------------- Contact ------------------------------------------>
-    <div id="Contact">
-      <div class="contact-container">
-        <div class="row">
-          <div class="contact-left">
-            <h1 class="sub-about-me">Contact Me</h1>
-            <p><i class="fa-solid fa-envelope fa-sm"></i>Rayyanadhoni107@gmail.com</p>
-            <div class="Social_Media">
-              <a href="https://wa.me/447587480115" target="_blank"><i class="fa-brands fa-whatsapp fa-2xl"></i></a>
-              <a href="https://discord.com/users/1204825531422478420" target="_blank"><i class="fa-brands fa-discord fa-2xl"></i></a>
-              <a href="https://www.instagram.com/rayyan.a_10/" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-              <a href="https://github.com/MoRayyan107" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
-              <a href="https://www.linkedin.com/in/rayyan-adhoni-33074b31b/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+        <div class="hero">
+            <nav class="nav-bar">
+                <div class="custom-logo">&lt;rayyan /&gt;</div>
+                <ul class="nav-links" id="nav-menu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#MyProjects">Projects</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openMenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Hi, I'm <strong>Mohammad Rayyan Adhoni</strong></p>
+                <h1>A 3rd Year <br><span id="typing-text"></span><br>
+                    at the University of Strathclyde
+                </h1>
             </div>
-          </div>    
-        </div>      <!-- Row ends here           -->
-      </div>        <!-- Container ends here     -->
-    </div>          <!-- Contact ends here       -->
-    <script src = "MainWebpage.js"></script>
-  </body>
+            <a href="#about" class="scroll-down" aria-label="Scroll down">
+                <span class="dot"></span>
+            </a>
+        </div>
+    </div>
+
+    <div id="about" class="fade-in-section">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/IMG_2899_small-removebg-preview.png" alt="Profile Image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        Hello World!!, I'm Mohammad Rayyan Adhoni, a 20-year-old student pursuing a Master of Engineering in 
+                        Computer Science at the University of Strathclyde in Glasgow. My passion for technology, 
+                        which began at Gems United Indian School in Abu Dhabi, has shaped my path ever since.
+                    </p>
+                    <p>
+                        I'm most passionate about the challenges of back-end engineering: architecting systems, 
+                        managing data, and building the robust APIs that power modern applications. While my primary 
+                        focus isn't on the front-end, I see it as an essential component of the whole, and this experience 
+                        enables me to build more effective and thoughtful back-end solutions. Dedicated to continuous growth, 
+                        I've enrolled in a coding bootcamp to accelerate my learning alongside my university studies.                    
+                    </p>
+                    <p>
+                        When I'm not coding, you can find me on Instagram or playing video games.
+                        <br><br><b class="neon-text">Welcome to my Portfolio!</b>
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="links active_type" onclick="opentab('Education', event)">Education</p>
+                        <p class="links" onclick="opentab('Skills', event)">Skills</p>
+                    </div>
+
+                    <div class="tab-contents Active" id="Education">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <h4>2023 - Present</h4>
+                                <h3>Masters of Engineering</h3>
+                                <p>University of Strathclyde, Glasgow</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4>2022 - 2023</h4>
+                                <h3>High School Degree</h3>
+                                <p>Gems United Indian School, Abu Dhabi</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4>2020 - 2021</h4>
+                                <h3>Middle School Degree</h3>
+                                <p>Gems United Indian School, Abu Dhabi</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-contents" id="Skills">
+                        <div class="skills-grid">
+
+                            <div class="skill-column">
+                                <h4 class="skill-category">Languages</h4>
+                                <div class="skill-item">
+                                    <h3><i class="fab fa-java"></i> Java</h3>
+                                    <div class="progress-bar"><div class="progress java"></div></div>
+                                </div>
+                                <div class="skill-item">
+                                    <h3><i class="fab fa-kickstarter-k"></i> Kotlin <span class="learning-tag">Learning</span></h3>
+                                    <div class="progress-bar"><div class="progress kotlin"></div></div>
+                                </div>
+                                <div class="skill-item">
+                                    <h3><i class="fas fa-database"></i> SQL</h3>
+                                    <div class="progress-bar"><div class="progress sql"></div></div>
+                                </div>
+
+                                <h4 class="skill-category">Frameworks & Libraries</h4>
+                                <div class="skill-item">
+                                    <h3><i class="fas fa-leaf"></i> Spring Boot</h3>
+                                    <div class="progress-bar"><div class="progress spring-boot"></div></div>
+                                </div>
+                                <div class="skill-item">
+                                    <h3><i class="fas fa-shield-alt"></i> Spring Security <span class="learning-tag">Learning</span></h3>
+                                    <div class="progress-bar"><div class="progress spring-security"></div></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-column">
+                                <h4 class="skill-category">Databases</h4>
+                                <div class="skill-item">
+                                    <h3><i class="fas fa-database"></i> PostgreSQL</h3>
+                                    <div class="progress-bar"><div class="progress postgres"></div></div>
+                                </div>
+                                
+                                <h4 class="skill-category">Tools & Platforms</h4>
+                                <div class="skill-item">
+                                    <h3><i class="fab fa-git-alt"></i> Git</h3>
+                                    <div class="progress-bar"><div class="progress git"></div></div>
+                                </div>
+                                <div class="skill-item">
+                                    <h3><i class="fab fa-aws"></i> AWS <span class="learning-tag">Learning</span></h3>
+                                    <div class="progress-bar"><div class="progress aws"></div></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="MyProjects" class="fade-in-section">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="project-list">
+                <div class="project">
+                    <img src="Images/project1.png" alt="Project 1">
+                    <div class="layer">
+                        <h3>Car Dealership System</h3>
+                        <p>A Python and MySQL-based application for managing car inventory and sales. Developed as a solo high school project.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="Images/project2.png" alt="Project 2">
+                    <div class="layer">
+                        <h3>Portfolio Website</h3>
+                        <p>This personal portfolio, built with HTML, CSS, and JavaScript to showcase my skills and projects.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                     <img src="Images/project3.png" alt="Project 3">
+                    <div class="layer">
+                        <h3>Future Project</h3>
+                        <p>Excited to apply my growing back-end skills to new and challenging projects. Check back soon!</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Contact" class="fade-in-section">
+        <div class="container">
+            <h1 class="sub-title">Get In Touch</h1>
+            <p>I'm open to new opportunities and collaborations.</p>
+            <div class="contact-info">
+                <p><i class="fas fa-paper-plane"></i> Rayyanadhoni107@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Glasgow, Scotland</p>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/rayyan-adhoni-33074b31b/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/MoRayyan107"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/rayyan.a_10/"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="copyright">© 2025 Mohammad Rayyan Adhoni. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script src="MainWebpage.js"></script>
+</body>
 </html>

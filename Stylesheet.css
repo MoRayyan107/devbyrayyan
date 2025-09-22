@@ -145,12 +145,12 @@ body {
 
 .scroll-down .dot {
   display: block;
-  width: 4px;
-  height: 4px;
+  width: 5px;
+  height: 5px;
   background: var(--primary-color);
   margin: 10px auto;
   border-radius: 50%;
-  animation: smooth-bounce 2s infinite;
+  animation: smooth-bounce 5s infinite;
 }
 
 @keyframes smooth-bounce {

@@ -3,6 +3,8 @@ const links = document.getElementsByClassName("links");
 const contents = document.getElementsByClassName("tab-contents");
 const skillsTab = document.getElementById("Skills"); // Get the Skills container
 
+const tabCache = {};
+
 function opentab(id, event) {
   // Remove active classes from all links and content panels
   for (let tabLink of links) {
@@ -14,7 +16,12 @@ function opentab(id, event) {
   
   // Add active classes to the clicked link and corresponding content
   event.currentTarget.classList.add("active_type");
-  document.getElementById(id).classList.add("Active");
+
+  // Cache the element for the given ID to avoid repeated DOM queries
+  if (!tabCache[id]) {
+    tabCache[id] = document.getElementById(id);
+  }
+  tabCache[id].classList.add("Active");
 
   // --- REVISED LOGIC FOR SKILL BAR ANIMATION ---
   // Always remove the animation class first to reset the bars to 0

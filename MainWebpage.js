@@ -1,12 +1,11 @@
 // --- Tab Functionality for "About Me" Section ---
 const links = document.getElementsByClassName("links");
 const contents = document.getElementsByClassName("tab-contents");
-const skillsTab = document.getElementById("Skills"); // Get the Skills container
+const skillsTab = document.getElementById("Skills"); 
 
 const tabCache = {};
 
 function opentab(id, event) {
-  // Remove active classes from all links and content panels
   for (let tabLink of links) {
     tabLink.classList.remove("active_type");
   }
@@ -14,26 +13,19 @@ function opentab(id, event) {
     tabContent.classList.remove("Active");
   }
   
-  // Add active classes to the clicked link and corresponding content
   event.currentTarget.classList.add("active_type");
 
-  // Cache the element for the given ID to avoid repeated DOM queries
   if (!tabCache[id]) {
     tabCache[id] = document.getElementById(id);
   }
   tabCache[id].classList.add("Active");
 
-  // --- REVISED LOGIC FOR SKILL BAR ANIMATION ---
-  // Always remove the animation class first to reset the bars to 0
   skillsTab.classList.remove('animate-progress');
 
-  // If the opened tab is 'Skills', re-add the class after a tiny delay.
-  // This delay gives the browser time to apply the 'display: block' style,
-  // which ensures the CSS transition will fire correctly.
   if (id === 'Skills') {
     setTimeout(function() {
       skillsTab.classList.add('animate-progress');
-    }, 100); // 100 milliseconds is a safe delay
+    }, 100); 
   }
 }
 
@@ -52,10 +44,9 @@ function closeMenu() {
 
 // --- Initializations on DOMContentLoaded ---
 document.addEventListener("DOMContentLoaded", function() {
-  // --- Dynamic Typewriter Effect ---
   const typingElement = document.getElementById("typing-text");
   if (typingElement) {
-    const words = ["Computer Science Student", "Back-End Development", "Software Engineer","Web Development"];
+    const words = ["Computer Science Student", "Back-End Developer", "Software Engineer"];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -93,10 +84,8 @@ document.addEventListener("DOMContentLoaded", function() {
   const projects = document.querySelectorAll('.project');
   projects.forEach(project => {
       project.addEventListener('click', () => {
-          // This allows the user to tap the same card to close it
           project.classList.toggle('tapped');
 
-          // This closes other open cards when you tap a new one
           projects.forEach(otherProject => {
               if (otherProject !== project) {
                   otherProject.classList.remove('tapped');

@@ -303,10 +303,6 @@ body {
   background-position: center;
 }
 
-.about-col-1 img {
-  display: none;
-}
-
 .about-col-2 {
   flex-basis: 60%;
 }

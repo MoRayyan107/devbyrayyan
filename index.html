@@ -6,7 +6,7 @@
     
     <meta property="og:title" content="Mohammad Rayyan | Developer Portfolio">
     <meta property="og:description" content="Explore my portfolio showcasing projects, skills, and background in computer science.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/MoRayyan107/devbyrayyan/main/Images/preview.png">
+    <meta property="og:image" content="https://raw.githubusercontent.com/MoRayyan107/devbyrayyan/main/assets/preview.png">
     <meta property="og:url" content="https://morayyan107.github.io/devbyrayyan/">
     <meta name="twitter:card" content="summary_large_image">
 
@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Stylesheet.css">
-    <link rel="icon" href="Images/R.jpg">
+    <link rel="icon" href="assets/R.jpg">
     <script src="https://kit.fontawesome.com/f9336084cb.js" crossorigin="anonymous"></script>
 </head>
 
@@ -28,6 +28,7 @@
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#MyProjects">Projects</a></li>
+                    <li><a href="#Certificates">Certificates</a></li>
                     <li><a href="#Contact">Contact</a></li>
                     <i class="fas fa-times" onclick="closeMenu()"></i>
                 </ul>
@@ -161,7 +162,7 @@
             <div class="project-list">
                 
                 <div class="project">
-                    <img src="Images/ScotBank_Ai_generated_image.png" alt="ScotBank Project">
+                    <img src="assets/ScotBank_Ai_generated_image.png" alt="ScotBank Project">
                     <div class="layer">
                         <div class="layer-text">
                             <h3>ScotBank (JPMC collaborative)</h3>
@@ -172,7 +173,7 @@
                 </div>
 
                 <div class="project">
-                    <img src="Images/Discord App Logo.png" alt="Discord App Project">
+                    <img src="assets/Discord App Logo.png" alt="Discord App Project">
                     <div class="layer">
                         <div class="layer-text">
                             <h3>Discord App (In making)</h3>
@@ -184,6 +185,42 @@
 
             </div>
         </div>
+    </div>
+
+    <div id="Certificates" class="fade-in-section">
+        <div class="container">
+            <h1 class="sub-title">Certificates</h1>
+            <div class="certificate-list">
+
+                <!-- Example Certificate (Can be duplicated or replaced) -->
+                <div class="certificate" onclick="openModal('assets/ScotBank_Ai_generated_image.png')">
+                    <img src="assets/ScotBank_Ai_generated_image.png" alt="Certificate Placeholder">
+                    <div class="cert-layer">
+                        <div class="cert-layer-text">
+                            <h3>Certificate Title</h3>
+                            <p>Click to view full image</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificate" onclick="openModal('assets/Discord App Logo.png')">
+                    <img src="assets/Discord App Logo.png" alt="Certificate Placeholder">
+                    <div class="cert-layer">
+                        <div class="cert-layer-text">
+                            <h3>Certificate Title</h3>
+                            <p>Click to view full image</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="certModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
     </div>
 
     <div id="Contact" class="fade-in-section">

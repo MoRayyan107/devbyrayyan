@@ -23,7 +23,7 @@
     <div id="header">
         <div class="hero">
             <nav class="nav-bar">
-                <div class="custom-logo">&lt;rayyan /&gt;</div>
+                <div class="custom-logo"><a href="#header">&lt;rayyan /&gt;</a></div>
                 <ul class="nav-links" id="nav-menu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -44,9 +44,6 @@
                     <a class="btn btn-ghost" href="#Contact">Let's Talk</a>
                 </div>
             </div>
-            <a href="#about" class="scroll-down" aria-label="Scroll down">
-                <span class="dot"></span>
-            </a>
         </div>
     </div>
 
@@ -102,51 +99,51 @@
 
                         <div class="tab-contents" id="Skills">
                             <div class="skills-grid">
-
                                 <div class="skill-column">
-                                    <h4 class="skill-category">Languages</h4>
+                                    <h4 class="skill-category">Core Backend (My Daily Stack)</h4>
                                     <div class="skill-item">
                                         <h3><i class="fab fa-java"></i> Java</h3>
-                                        <div class="progress-bar"><div class="progress java"></div></div>
                                     </div>
                                     <div class="skill-item">
-                                        <h3><i class="fab fa-kickstarter-k"></i> Kotlin <span class="learning-tag">Not Started Yet</span></h3>
-                                        <div class="progress-bar"><div class="progress kotlin"></div></div>
+                                        <h3><i class="fas fa-leaf"></i> Spring Boot</h3>
                                     </div>
                                     <div class="skill-item">
-                                        <h3><i class="fas fa-database"></i> SQL</h3>
-                                        <div class="progress-bar"><div class="progress sql"></div></div>
+                                        <h3><i class="fas fa-database"></i> PostgreSQL & SQL</h3>
+                                    </div>
+                                
+                                    <h4 class="skill-category" style="margin-top: 20px;">Infrastructure & DevOps</h4>
+                                    <div class="skill-item">
+                                        <h3><i class="fab fa-git-alt"></i> Git & Version Control</h3>
+                                    </div>
+                                    <div class="skill-item">
+                                        <h3><i class="fab fa-aws"></i> AWS (Fundamentals)</h3>
+                                    </div>
+                                    <div class="skill-item">
+                                        <h3><i class="fab fa-microsoft"></i> Azure (Fundamentals)</h3>
                                     </div>
 
-                                    <h4 class="skill-category">Frameworks & Libraries</h4>
-                                    <div class="skill-item">
-                                        <h3><i class="fas fa-leaf"></i> Spring Boot <span class="learning-tag">Learning</span></h3>
-                                        <div class="progress-bar"><div class="progress spring-boot"></div></div>
-                                    </div>
-                                    <div class="skill-item">
-                                        <h3><i class="fas fa-shield-alt"></i> Spring Security <span class="learning-tag">Learning</span></h3>
-                                        <div class="progress-bar"><div class="progress spring-security"></div></div>
-                                    </div>
                                 </div>
-
+                            
                                 <div class="skill-column">
-                                    <h4 class="skill-category">Databases</h4>
-                                    <div class="skill-item">
-                                        <h3><i class="fas fa-database"></i> PostgreSQL</h3>
-                                        <div class="progress-bar"><div class="progress postgres"></div></div>
-                                    </div>
-                                    
-                                    <h4 class="skill-category">Tools & Platforms</h4>
-                                    <div class="skill-item">
-                                        <h3><i class="fab fa-git-alt"></i> Git</h3>
-                                        <div class="progress-bar"><div class="progress git"></div></div>
-                                    </div>
-                                    <div class="skill-item">
-                                        <h3><i class="fab fa-aws"></i> AWS <span class="learning-tag">Not Started Yet</span></h3>
-                                        <div class="progress-bar"><div class="progress aws"></div></div>
-                                    </div>
-                                </div>
 
+                                    <h4 class="skill-category">Secondary & Scripting (Familiarity)</h4>
+                                    <div class="skill-item">
+                                        <h3><i class="fas fa-code"></i> Python</h3>
+                                    </div>
+                                    <div class="skill-item">
+                                        <h3><i class="fab fa-js"></i> JavaScript</h3>
+                                    </div>
+                                    <div class="skill-item">
+                                        <h3><i class="fas fa-c"></i> C </h3>
+                                    </div>
+                                    <div class="skill-item">
+                                        <h3><i class="fas fa-html5"></i> HTML</h3>
+                                    </div>
+                                    <div class="skill-item">
+                                        <h3><i class="fas fa-css"></i> CSS</h3>
+                                    </div>  
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -192,23 +189,11 @@
             <h1 class="sub-title">Certificates</h1>
             <div class="certificate-list">
 
-                <!-- Example Certificate (Can be duplicated or replaced) -->
-                <div class="certificate" onclick="openModal('assets/ScotBank_Ai_generated_image.png')">
-                    <img src="assets/ScotBank_Ai_generated_image.png" alt="Certificate Placeholder">
+                <div class="certificate" onclick="openModal('assets/ForageJPMC_Certificate.jpg')">
+                    <img src="assets/ForageJPMC_Certificate.jpg" alt="Certificate Placeholder">
                     <div class="cert-layer">
                         <div class="cert-layer-text">
-                            <h3>Certificate Title</h3>
-                            <p>Click to view full image</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="certificate" onclick="openModal('assets/Discord App Logo.png')">
-                    <img src="assets/Discord App Logo.png" alt="Certificate Placeholder">
-                    <div class="cert-layer">
-                        <div class="cert-layer-text">
-                            <h3>Certificate Title</h3>
-                            <p>Click to view full image</p>
+                            <h3>JPMC Forage Job Simulation</h3>
                         </div>
                     </div>
                 </div>
@@ -217,7 +202,6 @@
         </div>
     </div>
 
-    <!-- The Modal -->
     <div id="certModal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
         <img class="modal-content" id="modalImg">

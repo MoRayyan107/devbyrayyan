@@ -41,6 +41,26 @@ function closeMenu() {
   menu.style.right = '-300px';
 }
 
+// --- Certificate Modal Functionality ---
+function openModal(imageSrc) {
+  const modal = document.getElementById("certModal");
+  const modalImg = document.getElementById("modalImg");
+  modal.style.display = "block";
+  modalImg.src = imageSrc;
+}
+
+function closeModal() {
+  document.getElementById("certModal").style.display = "none";
+}
+
+// Close modal when clicking outside the image
+window.onclick = function(event) {
+  const modal = document.getElementById("certModal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
 
 // --- Initializations on DOMContentLoaded ---
 document.addEventListener("DOMContentLoaded", function() {

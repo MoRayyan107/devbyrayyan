@@ -29,6 +29,12 @@ function opentab(id, event) {
   }
 }
 
+// --- Blinking effect on Cutom Logo ---
+const slash = document.getElementById("slash-command");
+setInterval(() => {
+  slash.classList.toggle("slash");
+}, 600);
+
 
 // --- Mobile Navigation Menu ---
 const menu = document.getElementById('nav-menu');

@@ -29,11 +29,11 @@ function opentab(id, event) {
   }
 }
 
-// --- Blinking effect on Cutom Logo ---
+// --- Blinking effect on Custom Logo ---
 const slash = document.getElementById("slash-command");
 setInterval(() => {
   slash.classList.toggle("slash");
-}, 600);
+}, 500);
 
 
 // --- Mobile Navigation Menu ---
@@ -70,42 +70,6 @@ window.onclick = function(event) {
 
 // --- Initializations on DOMContentLoaded ---
 document.addEventListener("DOMContentLoaded", function() {
-  const typingElement = document.getElementById("typing-text");
-  if (typingElement) {
-    const words = ["Computer Science Student", "Back-End Developer", "Software Engineer"];
-    let wordIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-
-    function type() {
-      const currentWord = words[wordIndex];
-      let displayText = '';
-
-      if (isDeleting) {
-        displayText = currentWord.substring(0, charIndex - 1);
-        charIndex--;
-      } else {
-        displayText = currentWord.substring(0, charIndex + 1);
-        charIndex++;
-      }
-
-      typingElement.textContent = displayText;
-
-      if (!isDeleting && charIndex === currentWord.length) {
-        setTimeout(() => { isDeleting = true; type(); }, 2000);
-      } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        wordIndex = (wordIndex + 1) % words.length;
-        setTimeout(type, 500);
-      } else {
-        const typeSpeed = isDeleting ? 50 : 150;
-        setTimeout(type, typeSpeed);
-      }
-    }
-
-    type();
-  }
-
   // --- Tappable Project Cards on Mobile ---
   const projects = document.querySelectorAll('.project');
   projects.forEach(project => {

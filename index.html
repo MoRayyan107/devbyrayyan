@@ -4,72 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta property="og:title" content="Mohammad Rayyan | Developer Portfolio">
-    <meta property="og:description" content="Explore my portfolio showcasing projects, skills, and background in computer science.">
+    <meta property="og:title" content="Mohammad Rayyan | Backend Software Engineer">
+    <meta property="og:description" content="Backend Software Engineer specialising in Java, Spring Boot, and distributed systems.">
     <meta property="og:image" content="https://raw.githubusercontent.com/MoRayyan107/devbyrayyan/main/assets/preview.png">
-    <meta property="og:url" content="https://morayyan107.github.io/devbyrayyan/">
+    <meta property="og:url" content="https://rayyanadhoni-portfolio.netlify.app/">
     <meta name="twitter:card" content="summary_large_image">
 
-    <title>Mohammad Rayyan | Portfolio</title>
+    <title>Mohammad Rayyan | Backend Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Stylesheet.css">
     <link rel="icon" href="assets/R.jpg">
     <script src="https://kit.fontawesome.com/f9336084cb.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <nav class="nav-bar">
+        <div class="custom-logo">
+            <a href="#header">C:\rayyan&gt;<span class="slash" id="slash-command">|</span></a>
+        </div>
+        <ul class="nav-links" id="nav-menu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#MyProjects">Projects</a></li>
+            <li><a href="#Certificates">Certs</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            <i class="fas fa-times" onclick="closeMenu()"></i>
+        </ul>
+        <i class="fas fa-bars" onclick="openMenu()"></i>
+    </nav>
+
+    <!-- Main place -->
     <div id="header">
         <div class="hero">
-            <nav class="nav-bar">
-                <div class="custom-logo"><a href="#header">C:\rayyan&gt;<span class="slash" id="slash-command">|</span></a></div>
-                <ul class="nav-links" id="nav-menu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#MyProjects">Projects</a></li>
-                    <li><a href="#Certificates">Certificates</a></li>
-                    <li><a href="#Contact">Contact</a></li>
-                    <i class="fas fa-times" onclick="closeMenu()"></i>
-                </ul>
-                <i class="fas fa-bars" onclick="openMenu()"></i>
-            </nav>
+            <div class="hero-noise"></div>
+            <div class="hero-glow-1"></div>
+            <div class="hero-glow-2"></div>
             <div class="header-text">
-                <p>Hi, I'm <strong>Rayyan Adhoni</strong></p>
-                <h1>A 4th Year <br><span id="typing-text"></span><br>
-                    at the University of Strathclyde
-                </h1>
+                <div class="hero-tag">
+                    <span class="tag-dot"></span>
+                    Backend Software Engineer
+                </div>
+                <h1>Mohammad<br><em>Rayyan</em> Adhoni</h1>
+                <p class="hero-sub">Building scalable backend systems with <strong>Java</strong> &amp; <strong>Spring Boot</strong>.<br>MEng Computer Science · University of Strathclyde</p>
                 <div class="cta-row">
                     <a class="btn btn-primary" href="#MyProjects">View Projects</a>
                     <a class="btn btn-ghost" href="#Contact">Let's Talk</a>
+                </div>
+                <div class="hero-chips">
+                    <span class="chip">Java</span>
+                    <span class="chip">Spring Boot</span>
+                    <span class="chip">PostgreSQL</span>
+                    <span class="chip">Docker</span>
+                    <span class="chip">Azure</span>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- my section -->
     <div id="about" class="fade-in-section">
         <div class="container">
             <div class="row">
-                <div class="about-col-1">
-                </div>
+                <div class="about-col-1"></div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
                     <div class="about-panel">
                         <p>
-                            Hello World!!, I'm Mohammad Rayyan Adhoni, a 21-year-old student pursuing a Master of Engineering in 
-                            Computer Science at the University of Strathclyde in Glasgow. My passion for technology, 
-                            which began at Gems United Indian School in Abu Dhabi, has shaped my path ever since.
+                            <strong>Hello!</strong> I am Mohammad Rayyan Adhoni, a <strong>Master of Engineering (MEng) in Computer Science </strong> at the University of Strathclyde 
+                            in Glasgow. My journey in technology began at GEMS United Indian School in Abu Dhabi, 
+                            and today I am deeply focused on the challenges of backend engineering.
+                            I enjoy architecting robust REST APIs, modeling relational data, and building resilient service layers designed to handle 
+                            real-world complexity. Driven by a commitment to continuous growth, I am also undertaking an intensive coding bootcamp to 
+                            accelerate my practical engineering skills alongside my academic studies.
                         </p>
                         <p>
-                            I'm most passionate about the challenges of back-end engineering: architecting systems, 
-                            managing data, and building the robust APIs that power modern applications. While my primary 
-                            focus isn't on the front-end, I see it as an essential component of the whole, and this experience 
-                            enables me to build more effective and thoughtful back-end solutions. Dedicated to continuous growth, 
-                            I've enrolled in a coding bootcamp to accelerate my learning alongside my university studies.                    
-                        </p>
-                        <p>
-                            When I'm not writing code, I swap my keyboard for a controller or check out what's new on Instagram.
-                            <br><br><b class="neon-text">Welcome to my Portfolio!</b>
+                            I approach software development with an emphasis on <strong>correctness first, then scale</strong>. 
+                            I prioritize writing clean, testable code backed by rigorous unit testing before shifting focus to 
+                            optimization.
+                            While my core expertise lies in backend systems and data management, 
+                            my holistic understanding of front-end integration allows me to build more effective, thoughtful, 
+                            and end-to-end cooperative solutions.
                         </p>
 
                         <div class="tab-titles">
@@ -80,18 +96,13 @@
                         <div class="tab-contents Active" id="Education">
                             <div class="timeline">
                                 <div class="timeline-item">
-                                    <h4>2023 - Present</h4>
-                                    <h3>Masters of Engineering</h3>
+                                    <h4>2023 — Present</h4>
+                                    <h3>MEng Computer Science</h3>
                                     <p>University of Strathclyde, Glasgow</p>
                                 </div>
                                 <div class="timeline-item">
-                                    <h4>2021 - 2023</h4>
-                                    <h3>High School Degree</h3>
-                                    <p>Gems United Indian School, Abu Dhabi</p>
-                                </div>
-                                <div class="timeline-item">
-                                    <h4>2020 - 2021</h4>
-                                    <h3>Middle School Degree</h3>
+                                    <h4>2021 — 2023</h4>
+                                    <h3>A-Levels / High School</h3>
                                     <p>Gems United Indian School, Abu Dhabi</p>
                                 </div>
                             </div>
@@ -100,83 +111,101 @@
                         <div class="tab-contents" id="Skills">
                             <div class="skills-grid">
                                 <div class="skill-column">
-                                    <h4 class="skill-category">Core Backend (My Daily Stack)</h4>
-                                    <div class="skill-item">
-                                        <h3><i class="fab fa-java"></i> Java</h3>
-                                    </div>
-                                    <div class="skill-item">
-                                        <h3><i class="fas fa-leaf"></i> Spring Boot</h3>
-                                    </div>
-                                    <div class="skill-item">
-                                        <h3><i class="fas fa-database"></i> PostgreSQL & SQL</h3>
-                                    </div>
-                                
-                                    <h4 class="skill-category" style="margin-top: 20px;">Infrastructure & DevOps</h4>
-                                    <div class="skill-item">
-                                        <h3><i class="fab fa-git-alt"></i> Git & Version Control</h3>
-                                    </div>
-                                    <div class="skill-item">
-                                        <h3><i class="fab fa-aws"></i> AWS (Fundamentals)</h3>
-                                    </div>
-                                    <div class="skill-item">
-                                        <h3><i class="fab fa-microsoft"></i> Azure (Fundamentals)</h3>
-                                    </div>
+                                    <h4 class="skill-category">Core Backend</h4>
+                                    <div class="skill-item"><h3><i class="fab fa-java"></i> Java</h3></div>
+                                    <div class="skill-item"><h3><i class="fas fa-leaf"></i> Spring Boot</h3></div>
+                                    <div class="skill-item"><h3><i class="fas fa-database"></i> PostgreSQL &amp; MySQL</h3></div>
+                                    <div class="skill-item"><h3><i class="fas fa-vial"></i> JUnit 5 &amp; Mockito</h3></div>
 
+                                    <h4 class="skill-category" style="margin-top:20px">Infrastructure</h4>
+                                    <div class="skill-item"><h3><i class="fab fa-docker"></i> Docker</h3></div>
+                                    <div class="skill-item"><h3><i class="fab fa-microsoft"></i> Azure Container Apps</h3></div>
+                                    <div class="skill-item"><h3><i class="fab fa-git-alt"></i> Git &amp; GitHub Actions</h3></div>
                                 </div>
-                            
                                 <div class="skill-column">
+                                    <h4 class="skill-category">Secondary &amp; Scripting</h4>
+                                    <div class="skill-item"><h3><i class="fab fa-python"></i> Python</h3></div>
+                                    <div class="skill-item"><h3><i class="fab fa-js"></i> JavaScript</h3></div>
+                                    <div class="skill-item"><h3><i class="fas fa-code"></i> C</h3></div>
+                                    <div class="skill-item"><h3><i class="fab fa-html5"></i> HTML &amp; CSS</h3></div>
 
-                                    <h4 class="skill-category">Secondary & Scripting (Familiarity)</h4>
-                                    <div class="skill-item">
-                                        <h3><i class="fas fa-code"></i> Python</h3>
-                                    </div>
-                                    <div class="skill-item">
-                                        <h3><i class="fab fa-js"></i> JavaScript</h3>
-                                    </div>
-                                    <div class="skill-item">
-                                        <h3><i class="fas fa-c"></i> C </h3>
-                                    </div>
-                                    <div class="skill-item">
-                                        <h3><i class="fas fa-html5"></i> HTML</h3>
-                                    </div>
-                                    <div class="skill-item">
-                                        <h3><i class="fas fa-css"></i> CSS</h3>
-                                    </div>  
-
+                                    <h4 class="skill-category" style="margin-top:20px">Roadmap</h4>
+                                    <div class="skill-item roadmap-item"><h3><i class="fas fa-circle-notch"></i> Apache Kafka</h3></div>
+                                    <div class="skill-item roadmap-item"><h3><i class="fas fa-circle-notch"></i> Redis</h3></div>
+                                    <div class="skill-item roadmap-item"><h3><i class="fas fa-circle-notch"></i> CI/CD Pipelines</h3></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- PROJECTS -->
     <div id="MyProjects" class="fade-in-section">
         <div class="container">
-            <h1 class="sub-title">My Projects</h1>
+            <h1 class="sub-title">Project Case Studies</h1>
             <div class="project-list">
-                
-                <div class="project">
-                    <img src="assets/ScotBank_Ai_generated_image.png" alt="ScotBank Project">
-                    <div class="layer">
-                        <div class="layer-text">
-                            <h3>ScotBank (JPMC collaborative)</h3>
-                            <p>A simulated banking application built in Java, demonstrating object-oriented principles for account management.</p>
+
+                <div class="project-card">
+                    <div class="project-img-wrap">
+                        <img src="assets/ScotBank_Ai_generated_image.png" alt="ScotBank Project">
+                        <div class="project-img-overlay"></div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span class="project-tag">Java</span>
+                            <span class="project-tag">OOP</span>
+                            <span class="project-tag">Concurrency</span>
                         </div>
-                        <a href="https://github.com/MoRayyan107/ScotBank" target="_blank" rel="noopener" title="View ScotBank on GitHub"><i class="fab fa-github"></i></a>
+                        <h3 class="project-title">ScotBank</h3>
+                        <div class="case-block">
+                            <span class="case-label">Challenge</span>
+                            <p> 
+                                Develop a foundational banking application architecture, emphasizing strict encapsulation and clear separation 
+                                between business logic and account state to ensure maintainable, testable code with coverage above 75%.
+                            </p>
+                        </div>
+                        <div class="case-block">
+                            <span class="case-label">Solution</span>
+                            <p>
+                                Designed a working banking system with core operations (deposits, withdrawals, transfers) and account types (checking, savings).
+                                Employed OOP principles to encapsulate account state and business logic, achieving 80%+ test coverage with JUnit 5 and Mockito.
+                                Handled strong encapsulation by keeping account state private and exposing only necessary operations, ensuring a clean separation of concerns.
+                            </p>
+                        </div>
+                        <a class="project-link" href="https://github.com/MoRayyan107/ScotBank" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i> View Repository
+                        </a>
                     </div>
                 </div>
 
-                <div class="project">
-                    <img src="assets/Discord App Logo.png" alt="Discord App Project">
-                    <div class="layer">
-                        <div class="layer-text">
-                            <h3>Discord App (In making)</h3>
-                            <p>An University Project expanded with additional features and improvements.</p>
+                <div class="project-card">
+                    <div class="project-img-wrap">
+                        <img src="assets/Discord App Logo.png" alt="Discord App Project">
+                        <div class="project-img-overlay">
+                            <span class="overlay-text">In Progress</span>
                         </div>
-                        <a href="https://github.com/MoRayyan107/Discord" target="_blank" rel="noopener" title="View Discord App on GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span class="project-tag">Java</span>
+                            <span class="project-tag">Concurrent I/O</span>
+                            <span class="project-tag">Sockets</span>
+                        </div>
+                        <h3 class="project-title">Discord Service</h3>
+                        <div class="case-block">
+                            <span class="case-label">Challenge</span>
+                            <p>Multi-user messaging with simultaneous connections and real-time propagation without blocking I/O.</p>
+                        </div>
+                        <div class="case-block">
+                            <span class="case-label">Solution</span>
+                            <p>Java concurrency primitives managing independent client sessions. Message dispatch model decoupling production from delivery.</p>
+                        </div>
+                        <a class="project-link" href="https://github.com/MoRayyan107/Discord" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i> View Repository
+                        </a>
                     </div>
                 </div>
 
@@ -184,41 +213,40 @@
         </div>
     </div>
 
+    <!-- CERTIFICATES -->
     <div id="Certificates" class="fade-in-section">
         <div class="container">
             <h1 class="sub-title">Certificates</h1>
             <div class="certificate-list">
-
                 <div class="certificate" onclick="openModal('assets/ForageJPMC_Certificate.jpg')">
-                    <img src="assets/ForageJPMC_Certificate.jpg" alt="Certificate Placeholder">
-                    <div class="cert-layer">
-                        <div class="cert-layer-text">
-                            <h3>JPMC Forage Job Simulation</h3>
-                        </div>
+                    <img src="assets/ForageJPMC_Certificate.jpg" alt="JPMC Forage Certificate">
+                    <div class="cert-layer-text">
+                        <h3>JPMC Forage Job Simulation</h3>
+                        <p>JPMorgan Chase &amp; Co. · Software Engineering</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 
+    <!-- CERT MODAL -->
     <div id="certModal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modalImg">
+        <img class="modal-content" id="modalImg" alt="Certificate">
     </div>
 
+    <!-- CONTACT -->
     <div id="Contact" class="fade-in-section">
         <div class="container">
             <h1 class="sub-title">Get In Touch</h1>
-            <p>I'm open to new opportunities and collaborations.</p>
+            <p class="contact-sub">Open to backend engineering roles, internships, and collaborations.</p>
             <div class="contact-info">
-                <p><i class="fas fa-paper-plane"></i> Rayyanadhoni107@gmail.com</p>
+                <p><i class="fas fa-paper-plane"></i> rayyanadhoni107@gmail.com</p>
                 <p><i class="fas fa-map-marker-alt"></i> Glasgow, Scotland</p>
             </div>
             <div class="social-icons">
-                <a href="https://www.linkedin.com/in/rayyan-adhoni-33074b31b/"><i class="linkedIn fab fa-linkedin"></i></a>
-                <a href="https://github.com/MoRayyan107"><i class="github fab fa-github"></i></a>
-                <a href="https://www.instagram.com/rayyan.a_10/"><i class="insta fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/mohammad-rayyan-adhoni" aria-label="LinkedIn"><i class="fab fa-linkedin linkedIn"></i></a>
+                <a href="https://github.com/MoRayyan107" aria-label="GitHub"><i class="fab fa-github github"></i></a>
             </div>
             <p class="copyright">© 2025 Mohammad Rayyan Adhoni. All rights reserved.</p>
         </div>

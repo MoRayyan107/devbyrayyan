@@ -104,8 +104,7 @@ body {
 
 .hero {
   min-height: 100vh;
-  background: linear-gradient(130deg, rgba(6,10,14,0.95) 20%, rgba(10,18,26,0.75) 55%, rgba(4,8,12,0.9) 100%),
-              url('assets/Background-pica.webp') no-repeat center left / cover;
+  background-color: var(--bg-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -113,10 +112,28 @@ body {
   overflow: hidden;
 }
 
+.hero-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(130deg, rgba(6,10,14,0.95) 20%, rgba(10,18,26,0.75) 55%, rgba(4,8,12,0.9) 100%);
+  z-index: 1;
+}
+
 .hero-noise {
   position: absolute; inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
   pointer-events: none; opacity: 0.4;
+  z-index: 2; 
 }
 
 .hero-glow-1 {
@@ -125,6 +142,7 @@ body {
   background: radial-gradient(circle, rgba(94,234,212,0.12) 0%, transparent 70%);
   top: -100px; left: -100px;
   pointer-events: none;
+  z-index: 2;
 }
 
 .hero-glow-2 {
@@ -133,6 +151,7 @@ body {
   background: radial-gradient(circle, rgba(245,158,11,0.1) 0%, transparent 70%);
   bottom: 0; right: 5%;
   pointer-events: none;
+  z-index: 2;
 }
 
 .header-text {
@@ -140,7 +159,7 @@ body {
   padding-top: 80px;
   max-width: 740px;
   position: relative;
-  z-index: 2;
+  z-index: 10; 
 }
 
 .hero-tag {

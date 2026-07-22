@@ -13,6 +13,17 @@ export const Hero: React.FC = () => {
   return (
     <div id="header">
       <div className="hero">
+        {/* instead of using url in css rather use it here */}
+        <img 
+          src="assets/Background-pica.webp" 
+          alt="Hero Background" 
+          className="hero-bg-img"
+          fetchPriority="high"
+        />
+
+        {/* The dark gradient overlay moved to its own div */}
+        <div className="hero-gradient-overlay"></div>
+
         <div className="hero-noise"></div>
         <div className="hero-glow-1"></div>
         <div className="hero-glow-2"></div>

@@ -105,7 +105,7 @@ body {
 .hero {
   min-height: 100vh;
   background: linear-gradient(130deg, rgba(6,10,14,0.95) 20%, rgba(10,18,26,0.75) 55%, rgba(4,8,12,0.9) 100%),
-              url('assets/Background-pica.png') no-repeat center left / cover;
+              url('assets/Background-pica.webp') no-repeat center left / cover;
   display: flex;
   flex-direction: column;
   justify-content: center;

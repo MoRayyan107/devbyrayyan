@@ -10,9 +10,9 @@ export const Certificates: React.FC = () => {
         <div className="certificate-list">
           <div 
             className="certificate" 
-            onClick={() => setModalImg('assets/ForageJPMC_Certificate.jpg')}
+            onClick={() => setModalImg('assets/ForageJPMC_Certificate.webp')}
           >
-            <img src="assets/ForageJPMC_Certificate.jpg" alt="JPMC Forage Certificate" />
+            <img src="assets/ForageJPMC_Certificate.webp" alt="JPMC Forage Certificate" />
             <div className="cert-layer-text">
               <h3>JPMC Forage Job Simulation</h3>
               <p>JPMorgan Chase &amp; Co. · Software Engineering</p>

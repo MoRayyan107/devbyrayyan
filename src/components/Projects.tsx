@@ -13,7 +13,7 @@ const projectsData: Project[] = [
   {
     title: 'ScotBank',
     tags: ['Java', 'OOP', 'Unit Testing'],
-    image: 'assets/Bank_picture.png',
+    image: 'assets/Bank_picture.webp',
     challenge: 'Develop a foundational banking application architecture, emphasizing strict encapsulation and clear separation between business logic and account state to ensure maintainable, testable code with coverage above 75%.',
     solution: 'Designed a working banking system with core operations (deposits, withdrawals, transfers) and account types (checking, savings). Employed OOP principles to encapsulate account state and business logic, achieving 80%+ test coverage with JUnit 5 and Mockito.',
     repoUrl: 'https://github.com/MoRayyan107/ScotBank',
@@ -21,7 +21,7 @@ const projectsData: Project[] = [
   {
     title: 'Discord Service',
     tags: ['Java', 'Concurrent I/O', 'Sockets'],
-    image: 'assets/Discord App Logo.png',
+    image: 'assets/Discord App Logo.webp',
     challenge: 'Multi-user messaging with simultaneous connections and real-time propagation without blocking I/O.',
     solution: 'Java concurrency primitives managing independent client sessions. Message dispatch model decoupling production from delivery.',
     repoUrl: 'https://github.com/MoRayyan107/Discord',

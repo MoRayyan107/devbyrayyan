@@ -327,7 +327,7 @@ body {
   border-radius: var(--radius);
   box-shadow: 0 0 30px var(--primary-glow);
   border: 1px solid rgba(94,234,212,0.1);
-  background-image: url(https://res.cloudinary.com/daearheox/image/upload/Image_AboutPage_n3lrfr);
+  background-image: url('/assets/IMG.jpeg');
   background-size: cover;
   background-position: center;
 }
@@ -486,6 +486,26 @@ body {
 
 .roadmap-item h3 { color: #4a5a64; }
 .roadmap-item .fas { color: #2e404c; }
+
+.roadmap-item.in-progress h3 { color: var(--text-primary); }
+.progress-indicator {
+  position: relative;
+  display: inline-block;
+  width: 0.85em;
+  height: 0.85em;
+  margin-right: 8px;
+  background: conic-gradient(var(--accent-color) 0 10%, rgba(143, 163, 177, 0.35) 10% 100%);
+  border-radius: 50%;
+  vertical-align: -0.08em;
+}
+
+.progress-indicator::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: var(--card-bg);
+  border-radius: 50%;
+}
 
 /* Projects Section */
 .project-list {

@@ -25,90 +25,193 @@
   color: var(--text-primary);
 }
 
-body { background: var(--page); color: var(--text-primary); }
-::selection { background: var(--accent); color: var(--accent-ink); }
-.site-header, footer, .case-study, .also-built,
-.experience>div, .game-content details, .game-content .play-link {
+body {
+  background: var(--page);
+  color: var(--text-primary);
+}
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+.site-header,
+footer,
+.case-study,
+.also-built,
+.experience > div,
+.game-content details,
+.game-content .play-link {
   border-color: var(--line);
 }
-.hero-bottom strong, .experience strong { color: var(--text-primary); }
-.hero-bottom p, .hero-bottom p>span, .section-heading>p,
-.vault-copy>p, .story-grid p, .game-content p, .also-built p,
-.about-copy>p, .experience p, .experience>div>span,
-.also-built>.eyebrow, .game-content>.eyebrow,
-.zero .game-content>.eyebrow, .tags span, .cv-pending,
-summary>span, footer p, footer>span { color: var(--text-secondary); }
-.tags span:not(:last-child)::after { color: var(--text-secondary); }
-.wordmark span, h1 span, .green, .metrics strong,
-.hero-conversion .proof strong, .case-study summary,
-.games-heading>span:last-child, .play-link, .also-built>a,
-.contact-title em { color: var(--accent); }
-.about h2 span { color: var(--text-secondary); }
-.vault-copy h4 { color: var(--text-primary); }
-.button, .skip-link { background: var(--accent); color: var(--accent-ink); box-shadow: none; }
-.button:hover { background: var(--accent-hover); color: var(--accent-ink); box-shadow: none; }
-.availability { color: var(--text-secondary); }
-.availability i { background: var(--status); box-shadow: none; }
-.availability:hover { background: transparent; color: var(--text-primary); }
+.hero-bottom strong,
+.experience strong {
+  color: var(--text-primary);
+}
+.hero-bottom p,
+.hero-bottom p > span,
+.section-heading > p,
+.vault-copy > p,
+.story-grid p,
+.game-content p,
+.also-built p,
+.about-copy > p,
+.experience p,
+.experience > div > span,
+.also-built > .eyebrow,
+.game-content > .eyebrow,
+.zero .game-content > .eyebrow,
+.tags span,
+.cv-pending,
+summary > span,
+footer p,
+footer > span {
+  color: var(--text-secondary);
+}
+.tags span:not(:last-child)::after {
+  color: var(--text-secondary);
+}
+.wordmark span,
+h1 span,
+.green,
+.metrics strong,
+.hero-conversion .proof strong,
+.case-study summary,
+.games-heading > span:last-child,
+.play-link,
+.also-built > a,
+.contact-title em {
+  color: var(--accent);
+}
+.about h2 span {
+  color: var(--text-secondary);
+}
+.vault-copy h4 {
+  color: var(--text-primary);
+}
+.button,
+.skip-link {
+  background: var(--accent);
+  color: var(--accent-ink);
+  box-shadow: none;
+}
+.button:hover {
+  background: var(--accent-hover);
+  color: var(--accent-ink);
+  box-shadow: none;
+}
+.availability {
+  color: var(--text-secondary);
+}
+.availability i {
+  background: var(--status);
+  box-shadow: none;
+}
+.availability:hover {
+  background: transparent;
+  color: var(--text-primary);
+}
 .contact .availability {
   background: var(--surface);
   border-color: #4e8078;
   color: var(--status);
 }
-.contact .availability:hover { background: var(--surface-hover); }
-.project-notebook { background: var(--paper); color: var(--paper-ink); box-shadow: 8px 10px 0 #00000018; }
-.notebook-heading { border-color: var(--paper-line); }
-.sketch-flow>div { border-color: #6f9188; color: var(--paper-ink); }
-.sketch-highlight { background: var(--paper-highlight); }
-.margin-note { color: #3d6259; }
-.project-notebook>small { color: #48655f; }
-.game-card { background: transparent; }
-.zero .game-art { background: var(--slate); color: var(--text-primary); }
-.duck .game-art { background: var(--sage); color: var(--sage-ink); }
-.zero .game-symbol { color: var(--text-primary); }
+.contact .availability:hover {
+  background: var(--surface-hover);
+}
+.project-notebook {
+  background: var(--paper);
+  color: var(--paper-ink);
+  box-shadow: 8px 10px 0 #00000018;
+}
+.notebook-heading {
+  border-color: var(--paper-line);
+}
+.sketch-flow > div {
+  border-color: #6f9188;
+  color: var(--paper-ink);
+}
+.sketch-highlight {
+  background: var(--paper-highlight);
+}
+.margin-note {
+  color: #3d6259;
+}
+.project-notebook > small {
+  color: #48655f;
+}
+.game-card {
+  background: transparent;
+}
+.zero .game-art {
+  background: var(--slate);
+  color: var(--text-primary);
+}
+.duck .game-art {
+  background: var(--sage);
+  color: var(--sage-ink);
+}
+.zero .game-symbol {
+  color: var(--text-primary);
+}
 .vault-door {
   background: #3d4c51;
   border-color: #9aa8a7;
   box-shadow: inset 0 0 0 9px #202b30;
 }
-.vault-door>span { border-color: var(--accent); }
-.vault-door>span::before, .vault-door>span::after { background: var(--accent); }
-.art-label, .art-bottom, .illustration-label { color: inherit; }
-.dashboard-capture img { border-color: var(--line); }
-.dashboard-capture figcaption { color: var(--text-secondary); }
+.vault-door > span {
+  border-color: var(--accent);
+}
+.vault-door > span::before,
+.vault-door > span::after {
+  background: var(--accent);
+}
+.art-label,
+.art-bottom,
+.illustration-label {
+  color: inherit;
+}
+.dashboard-capture img {
+  border-color: var(--line);
+}
+.dashboard-capture figcaption {
+  color: var(--text-secondary);
+}
 .game-content details {
   border-top: 0;
 }
-.game-content details>summary {
+.game-content details > summary {
   padding: 16px 20px;
   border: 1px solid var(--line);
   border-radius: 6px;
   background: var(--surface);
   color: var(--text-primary);
-  transition: transform .2s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
-.game-content details>summary>span {
+.game-content details > summary > span {
   display: grid;
   place-items: center;
   width: 24px;
   height: 24px;
   color: var(--accent);
   font-size: 22px;
-  transition: transform .2s ease;
+  transition: transform 0.2s ease;
 }
-.game-content details>summary:focus-visible,
-.game-content details[open]>summary {
+.game-content details > summary:focus-visible,
+.game-content details[open] > summary {
   border-color: var(--accent);
   background: var(--surface-hover);
 }
-.game-content details[open]>summary>span {
+.game-content details[open] > summary > span {
   transform: rotate(45deg);
 }
-.game-content details[open]>p {
+.game-content details[open] > p {
   padding: 20px 4px 8px;
 }
 @media (hover: hover) {
-  .game-content details>summary:hover {
+  .game-content details > summary:hover {
     transform: translateY(-3px);
     border-color: var(--accent);
     background: var(--surface-hover);
@@ -125,9 +228,24 @@ summary>span, footer p, footer>span { color: var(--text-secondary); }
   font-weight: 500;
   line-height: 1.7;
 }
-a:focus-visible, button:focus-visible, summary:focus-visible { outline-color: var(--accent); }
-nav a:hover, .text-link:hover, .contact-links a:hover { color: var(--accent); }
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline-color: var(--accent);
+}
+nav a:hover,
+.text-link:hover,
+.contact-links a:hover {
+  color: var(--accent);
+}
 @media (max-width: 640px) {
-  nav { background: var(--surface); border-color: var(--line); }
-  .menu-toggle { background: var(--surface); color: var(--text-primary); border-color: var(--line); }
+  nav {
+    background: var(--surface);
+    border-color: var(--line);
+  }
+  .menu-toggle {
+    background: var(--surface);
+    color: var(--text-primary);
+    border-color: var(--line);
+  }
 }

@@ -1,38 +1,15 @@
-import React, { useState } from 'react';
+import { Arrow } from './portfolio';
 
-export const Certificates: React.FC = () => {
-  const [modalImg, setModalImg] = useState<string | null>(null);
-
-  return (
-    <div id="Certificates" className="fade-in-section is-visible">
-      <div className="container">
-        <h1 className="sub-title">Certificates</h1>
-        <div className="certificate-list">
-          <div 
-            className="certificate" 
-            onClick={() => setModalImg('assets/ForageJPMC_Certificate.webp')}
-          >
-            <img src="assets/ForageJPMC_Certificate.webp" alt="JPMC Forage Certificate" />
-            <div className="cert-layer-text">
-              <h3>JPMC Forage Job Simulation</h3>
-              <p>JPMorgan Chase &amp; Co. · Software Engineering</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Modal Render */}
-      {modalImg && (
-        <div className="modal" style={{ display: 'block' }} onClick={() => setModalImg(null)}>
-          <span className="close" onClick={() => setModalImg(null)}>&times;</span>
-          <img 
-            className="modal-content" 
-            src={modalImg} 
-            alt="Certificate Preview" 
-            onClick={(e) => e.stopPropagation()} 
-          />
-        </div>
-      )}
+export function Certificates() {
+  const certificate = `${import.meta.env.BASE_URL}assets/ForageJPMC_Certificate.webp`;
+  return <section id="Certificates" className="certificates wrap" aria-labelledby="certificates-title">
+    <div className="section-heading">
+      <div><span className="eyebrow">Learning beyond the coursework</span><h2 id="certificates-title">Certificates &amp; practice.</h2></div>
+      <p>A little more context on what I’ve been learning.</p>
     </div>
-  );
-};
+    <a className="certificate-feature" href={certificate} target="_blank" rel="noopener noreferrer">
+      <div className="certificate-preview"><img src={certificate} alt="JPMorgan Chase & Co. software engineering job simulation certificate from Forage" loading="lazy" /></div>
+      <div className="certificate-copy"><span className="eyebrow">Forage · Job simulation</span><h3>JPMorgan Chase &amp; Co.</h3><p>Software Engineering</p><p>A self-paced job simulation, completed through Forage.</p><span className="certificate-action">View certificate <Arrow /></span></div>
+    </a>
+  </section>;
+}

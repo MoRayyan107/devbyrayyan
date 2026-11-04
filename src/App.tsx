@@ -1,22 +1,7 @@
-import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { About } from './components/About';
 import { Projects } from './components/Projects';
-import { Certificates } from './components/Certificates';
+import { About } from './components/About';
 import { Contact } from './components/Contact';
-
-export const App: React.FC = () => {
-  return (
-    <div>
-      <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <Certificates />
-      <Contact />
-    </div>
-  );
-};
-
-export default App;
+import { Certificates } from './components/Certificates';
+export default function App() { return <><a className="skip-link" href="#main">Skip to content</a><Navbar /><main id="main"><Hero /><Projects /><About /><Certificates /><Contact /></main><footer className="wrap"><a className="wordmark" href="#">rayyan<span>.</span></a><p>© {new Date().getFullYear()} Mohammad Rayyan Adhoni</p><span>GLASGOW, SCOTLAND ↗</span></footer></>; }

@@ -979,6 +979,42 @@ footer .ai-note {
   flex: 0 0 18px;
   vertical-align: middle;
 }
+
+/* Mobile dividers make the long single-column page easier to scan. */
+@media (max-width: 760px) {
+  .work,
+  .about,
+  .certificates,
+  .contact {
+    border-top: 1px solid var(--line);
+  }
+  .work {
+    margin-top: 48px;
+    padding-top: 40px;
+  }
+  .about {
+    margin-top: 48px;
+    padding-top: 40px;
+  }
+  .certificates {
+    padding-top: 40px;
+  }
+  .contact {
+    padding-top: 40px;
+  }
+  .games-heading {
+    border-top: 1px solid var(--line);
+    padding-top: 32px;
+    margin-top: 40px;
+  }
+  .game-grid {
+    gap: 32px;
+  }
+  .game-card + .game-card {
+    border-top: 1px solid var(--line);
+    padding-top: 32px;
+  }
+}
 .site-header nav a {
   display: inline-flex;
   align-items: center;

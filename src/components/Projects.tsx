@@ -88,60 +88,6 @@ export function Projects() {
             )}
           </div>
         </article>
-        <section
-          id="vaultguard-story"
-          className="case-study"
-          aria-label="VaultGuard case study summary"
-        >
-          <details>
-            <summary>
-              Read the VaultGuard case study <span aria-hidden="true">+</span>
-            </summary>
-            <div className="story-grid">
-              <div>
-                <span className="eyebrow">THE PROBLEM</span>
-                <h4>Spot risk. Keep the flow.</h4>
-                <p>
-                  Transaction processing and fraud checks compete for time. The challenge:
-                  evaluate risk without bottlenecking the core banking service.
-                </p>
-              </div>
-              <div>
-                <span className="eyebrow">MY APPROACH</span>
-                <h4>Decouple the work.</h4>
-                <p>
-                  I built the backend around Spring Boot and Kafka, using event-driven
-                  processing for parallel risk scoring and WebSockets for live updates.
-                  Redis and PostgreSQL support the platform.
-                </p>
-              </div>
-              <div>
-                <span className="eyebrow">WHERE IT STANDS</span>
-                <h4>Measure what matters.</h4>
-                <p>
-                  Development is halted while I focus on university work and my
-                  dissertation. A local test recorded 222,965 requests, averaging 495.72
-                  requests per second. The 0.56% HTTP 500 failure rate was concentrated in
-                  a brief burst; the cause remains unconfirmed.
-                </p>
-                <a
-                  className="text-link"
-                  href={`${github}/VaultGuard`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Explore the source <Arrow />
-                </a>
-              </div>
-            </div>
-            <a
-              className="text-link case-report-link"
-              href={`${import.meta.env.BASE_URL}vaultguard.html`}
-            >
-              View the full metrics &amp; test report <Arrow />
-            </a>
-          </details>
-        </section>
         <div className="games-heading">
           <span className="eyebrow">And then there were the hackathons</span>
           <span>

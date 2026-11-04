@@ -12,34 +12,39 @@ export function VaultGuardTest() {
         users.
       </p>
       <div className="test-columns">
-        <div>
-          <h4>Test setup</h4>
-          <dl>
-            <div>
-              <dt>Backend target</dt>
-              <dd>
-                <code>http://localhost:8080</code>
-              </dd>
-            </div>
-            <div>
-              <dt>Concurrent simulated users</dt>
-              <dd>500</dd>
-            </div>
-            <div>
-              <dt>Configured spawn rate</dt>
-              <dd>50 simulated users / second</dd>
-            </div>
-            <div>
-              <dt>Duration</dt>
-              <dd>7 minutes 29 seconds</dd>
-            </div>
-          </dl>
-          <p>
-            The spawn rate controls how quickly simulated users join the test. It is
-            distinct from throughput: the requests recorded per second.
+        <div className="test-setup-column">
+          <div className="test-panel">
+            <h4>Test setup</h4>
+            <dl>
+              <div>
+                <dt>Backend target</dt>
+                <dd>
+                  <code>http://localhost:8080</code>
+                </dd>
+              </div>
+              <div>
+                <dt>Concurrent simulated users</dt>
+                <dd>500</dd>
+              </div>
+              <div>
+                <dt>Configured spawn rate</dt>
+                <dd>50 simulated users / second</dd>
+              </div>
+              <div>
+                <dt>Duration</dt>
+                <dd>7 minutes 29 seconds</dd>
+              </div>
+            </dl>
+            <p>
+              The spawn rate controls how quickly simulated users join the test. It is
+              distinct from throughput: the requests recorded per second.
+            </p>
+          </div>
+          <p className="test-endpoint">
+            Endpoint: <code>POST /api/v1/process/fraudDetection/transaction</code>
           </p>
         </div>
-        <div>
+        <div className="test-panel">
           <h4>Recorded results</h4>
           <dl>
             <div>
@@ -77,13 +82,18 @@ export function VaultGuardTest() {
           </dl>
         </div>
       </div>
-      <p className="test-endpoint">
-        Endpoint: <code>POST /api/v1/process/fraudDetection/transaction</code>
-      </p>
       <p>
         In plain language: half the recorded responses took about 420ms or less, 95% took
         about 870ms or less, and 99% took about 1.5 seconds or less. The slowest recorded
         response took about 11.3 seconds.
+      </p>
+      <h4>Where the performance needs work</h4>
+      <p>
+        A p95 of 870ms is higher than I’d want for a time-sensitive transaction flow.
+        Together with the slower responses and HTTP 500 failures, it highlights latency
+        and reliability issues I still need to investigate. When I resume development,
+        I’ll work on identifying the bottlenecks and addressing the failure burst, then
+        repeat the test to measure whether those changes improve the results.
       </p>
       <h4>What this exercise demonstrated</h4>
       <ul>

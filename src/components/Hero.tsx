@@ -27,7 +27,7 @@ export function Hero() {
           </p>
           <div className="hero-conversion">
             <div className="hero-actions">
-              <a className="button" href="#vaultguard">
+              <a className="button" href={`${import.meta.env.BASE_URL}vaultguard.html`}>
                 See VaultGuard <Arrow />
               </a>
               <CvLink />

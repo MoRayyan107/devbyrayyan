@@ -4,6 +4,8 @@ import { Projects } from './components/Projects';
 import { About } from './components/About';
 import { Contact } from './components/Contact';
 import { Certificates } from './components/Certificates';
+import { Brand } from './components/Brand';
+import { Arrow } from './components/portfolio';
 export default function App() {
   return (
     <>
@@ -19,11 +21,12 @@ export default function App() {
         <Contact />
       </main>
       <footer className="wrap">
-        <a className="wordmark" href="#">
-          rayyan<span>.</span>
-        </a>
+        <Brand href="#top" />
         <p>© {new Date().getFullYear()} Mohammad Rayyan Adhoni</p>
-        <span>GLASGOW, SCOTLAND ↗</span>
+        <span>
+          GLASGOW, SCOTLAND <Arrow />
+        </span>
+        <p className="ai-note">This portfolio was built with AI assistance.</p>
       </footer>
     </>
   );

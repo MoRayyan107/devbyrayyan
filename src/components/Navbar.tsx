@@ -1,15 +1,13 @@
 import { useState } from 'react';
 import { Arrow } from './portfolio';
-import { email } from './portfolioData';
+import { Brand } from './Brand';
 export function Navbar() {
   const [menu, setMenu] = useState(false);
   return (
     <>
       {' '}
-      <header className="site-header wrap">
-        <a className="wordmark" href="#">
-          rayyan<span>.</span>
-        </a>
+      <header id="top" className="site-header wrap">
+        <Brand href="#top" />
         <button
           className="menu-toggle"
           aria-expanded={menu}
@@ -26,7 +24,8 @@ export function Navbar() {
         >
           <a href="#work">Selected work</a>
           <a href="#about">About</a>
-          <a href={email}>
+          <a href="#Certificates">Certificates</a>
+          <a href="#contact">
             Let’s talk <Arrow />
           </a>
         </nav>

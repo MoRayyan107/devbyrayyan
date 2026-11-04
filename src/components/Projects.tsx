@@ -1,4 +1,3 @@
-import { VaultGuardTest } from './VaultGuardTest';
 import { Tags, Arrow } from './portfolio';
 import { github, games, projectMedia } from './portfolioData';
 export function Projects() {
@@ -22,31 +21,12 @@ export function Projects() {
             <span className="eyebrow green">Personal project · fraud detection</span>
             <h3>VaultGuard</h3>
             <h4>
-              What happens when a transaction
-              <br />
+              What happens when a transaction <br />
               doesn’t look quite right?
             </h4>
             <p>
               I built an event pipeline, risk scoring, and a role-based dashboard to
               explore how suspicious transactions can be detected and investigated.
-            </p>
-            <div className="metrics">
-              <div>
-                <strong>
-                  420<span>ms</span>
-                </strong>
-                <span>p50 latency</span>
-              </div>
-              <div>
-                <strong>
-                  870<span>ms</span>
-                </strong>
-                <span>p95 latency</span>
-              </div>
-            </div>
-            <p className="metric-note">
-              Local test · 500 concurrent simulated users · 7m 29s. Average 495.72 req/s;
-              1,250 HTTP 500 failures (0.56%).
             </p>
             <Tags
               items={[
@@ -57,6 +37,9 @@ export function Projects() {
                 'React / TypeScript',
               ]}
             />
+            <a className="button" href={`${import.meta.env.BASE_URL}vaultguard.html`}>
+              Read the case study & metrics <Arrow />
+            </a>
             <p className="project-status">
               In progress. Paused while I focus on studies and my dissertation.
             </p>
@@ -82,11 +65,17 @@ export function Projects() {
                 </div>
                 <div className="sketch-flow">
                   <div>01 · Incoming transactions</div>
-                  <span>↓</span>
+                  <span>
+                    <Arrow direction="down" />
+                  </span>
                   <div>02 · Kafka event stream</div>
-                  <span>↓</span>
+                  <span>
+                    <Arrow direction="down" />
+                  </span>
                   <div className="sketch-highlight">03 · Is this suspicious?</div>
-                  <span>↓</span>
+                  <span>
+                    <Arrow direction="down" />
+                  </span>
                   <div>04 · Score it. Surface it.</div>
                 </div>
                 <p className="margin-note">
@@ -102,7 +91,7 @@ export function Projects() {
         <section
           id="vaultguard-story"
           className="case-study"
-          aria-label="VaultGuard case study"
+          aria-label="VaultGuard case study summary"
         >
           <details>
             <summary>
@@ -130,10 +119,10 @@ export function Projects() {
                 <span className="eyebrow">WHERE IT STANDS</span>
                 <h4>Measure what matters.</h4>
                 <p>
-                  In progress, paused for studies and my dissertation. A local test
-                  recorded 222,965 requests, averaging 495.72 requests per second. The
-                  0.56% HTTP 500 failure rate was concentrated in a brief burst; the cause
-                  remains unconfirmed.
+                  Development is halted while I focus on university work and my
+                  dissertation. A local test recorded 222,965 requests, averaging 495.72
+                  requests per second. The 0.56% HTTP 500 failure rate was concentrated in
+                  a brief burst; the cause remains unconfirmed.
                 </p>
                 <a
                   className="text-link"
@@ -145,12 +134,19 @@ export function Projects() {
                 </a>
               </div>
             </div>
-            <VaultGuardTest />
+            <a
+              className="text-link case-report-link"
+              href={`${import.meta.env.BASE_URL}vaultguard.html`}
+            >
+              View the full metrics &amp; test report <Arrow />
+            </a>
           </details>
         </section>
         <div className="games-heading">
           <span className="eyebrow">And then there were the hackathons</span>
-          <span>These you can play. ↙</span>
+          <span>
+            These you can play. <Arrow direction="down-left" />
+          </span>
         </div>
         <div className="game-grid">
           {games.map((game) => (

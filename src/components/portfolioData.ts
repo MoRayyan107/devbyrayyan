@@ -33,28 +33,31 @@ export const stacks = [
 export const games = [
   {
     name: 'Zero Hour',
+    slug: 'zero-hour',
     className: 'zero',
     label: '2nd place · StrathHack 2026 · ScottishPower',
     url: 'https://team-20-1.onrender.com/',
     line: 'One night. One vault. Keep the attackers out.',
     description:
       'Built for ScottishPower’s cyber security awareness challenge at StrathHack 2026. Defend a fictional energy company’s data vault through one night of attack.',
-    story:
-      'Built for ScottishPower’s cyber security awareness challenge at StrathHack 2026. In a team of five, I worked on the rules and screens. Our game took second place.',
+    summary: 'A cyber security awareness game, built in a team of five.',
+    context: 'Our team of five took second place at StrathHack 2026.',
     art: 'ZERO HOUR_',
     symbol: '⌘',
   },
   {
     name: 'Duck Run',
+    slug: 'duck-run',
     className: 'duck',
     label: 'GUTS / JPMORGAN CHALLENGE',
     url: 'https://duck-run-lac.vercel.app/',
     line: 'Less talk. More waddle.',
     description:
       'A two-key browser game with a backend, built by a team for the JPMorgan challenge at GUTS.',
-    story:
-      'My part: networking, offline mode, the course generator, and the results screen. Built with a team at the GUTS hackathon.',
+    summary: 'A two-key browser game with a backend, built with a team at GUTS.',
+    context: 'A team project for the JPMorgan challenge at the GUTS hackathon.',
     art: 'DUCK RUN',
     symbol: '🦆',
   },
 ];
+export type GameProject = (typeof games)[number];

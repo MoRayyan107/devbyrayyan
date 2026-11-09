@@ -2,6 +2,7 @@ import { VaultGuardTest } from './VaultGuardTest';
 import { Arrow, Tags } from './portfolio';
 import { github } from './portfolioData';
 import { Brand } from './Brand';
+import { TransactionFlow } from './TransactionFlow';
 
 const home = import.meta.env.BASE_URL;
 
@@ -24,14 +25,15 @@ export function VaultGuardPage() {
             Inside <span>VaultGuard.</span>
           </h1>
           <p className="case-lead">
-            An event pipeline, risk scoring, and a role-based dashboard. Here’s how I
-            built it, what the local test showed, and what I still need to investigate.
+            A project exploring transaction processing and separate risk checks. Here’s
+            the idea behind it, what local testing suggests, and what I still need to
+            investigate.
           </p>
           <Tags
             items={['Spring Boot', 'Kafka', 'Redis', 'PostgreSQL', 'React / TypeScript']}
           />
           <p className="case-status">
-            Development is halted while I focus on university work and my dissertation.
+            A personal learning project. It has not been deployed to real users.
           </p>
           <a
             className="text-link"
@@ -42,54 +44,40 @@ export function VaultGuardPage() {
             Explore the source <Arrow />
           </a>
         </section>
-        <section className="case-metrics" aria-label="Local load-test highlights">
-          <div>
-            <span>Average throughput</span>
-            <strong>
-              495.72<small> req/s</small>
-            </strong>
-            <p>Across the recorded run</p>
-          </div>
-          <div>
-            <span>Median response · p50</span>
-            <strong>
-              420<small> ms</small>
-            </strong>
-            <p>Half of recorded responses</p>
-          </div>
-          <div>
-            <span>95th percentile · p95</span>
-            <strong>
-              870<small> ms</small>
-            </strong>
-            <p>95% of recorded responses</p>
-          </div>
-          <div className="case-metric-errors">
-            <span>HTTP 500 failures</span>
-            <strong>
-              0.56<small>%</small>
-            </strong>
-            <p>1,250 requests · cause unconfirmed</p>
-          </div>
-        </section>
         <section className="case-approach story-grid" aria-label="Problem and approach">
           <div>
-            <span className="eyebrow">THE PROBLEM</span>
-            <h4>Spot risk. Keep the flow.</h4>
+            <span className="eyebrow">The problem</span>
+            <h2>Spot risk. Keep the flow.</h2>
             <p>
-              Transaction processing and fraud checks compete for time. The challenge:
-              evaluate risk without bottlenecking the core banking service.
+              How can a transaction-processing system accept a payment while a separate
+              worker checks its risk? I wanted to understand how those pieces fit
+              together.
             </p>
           </div>
           <div>
-            <span className="eyebrow">MY APPROACH</span>
-            <h4>Decouple the work.</h4>
+            <span className="eyebrow">The approach</span>
+            <h2>Separate the work.</h2>
             <p>
-              I built the backend around Spring Boot and Kafka, using event-driven
-              processing for parallel risk scoring and WebSockets for live updates. Redis
-              and PostgreSQL support the platform.
+              The project uses Spring Boot, Kafka and PostgreSQL to explore event-driven
+              risk checking, with a role-based dashboard for reviewing transaction and
+              risk data.
+            </p>
+            <p>
+              Live notifications are deferred. The interaction below is a labelled
+              simulation of the flow.
             </p>
           </div>
+        </section>
+        <section id="transaction-flow" className="case-flow" aria-labelledby="flow-title">
+          <div className="case-flow-intro">
+            <span className="eyebrow">Follow a transaction</span>
+            <h2 id="flow-title">From payment to risk check.</h2>
+            <p>
+              Choose a normal or suspicious example to walk through the four stages. Open
+              the technical detail for a closer look at the implementation.
+            </p>
+          </div>
+          <TransactionFlow />
         </section>
         <VaultGuardTest />
         <div className="case-return">

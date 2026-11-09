@@ -1,25 +1,71 @@
+import { useEffect, useRef, useState } from 'react';
 import { Arrow } from './portfolio';
 import { email, github } from './portfolioData';
 import { CvLink } from './CvLink';
 
+const address = email.replace('mailto:', '');
+
 export function Contact() {
+  const [copyStatus, setCopyStatus] = useState<'idle' | 'copied' | 'failed'>('idle');
+  const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  const copying = useRef(false);
+  const mounted = useRef(false);
+
+  useEffect(() => {
+    mounted.current = true;
+    return () => {
+      mounted.current = false;
+      clearTimeout(timer.current);
+    };
+  }, []);
+
+  async function copyEmail() {
+    if (copying.current) return;
+    copying.current = true;
+    clearTimeout(timer.current);
+    try {
+      await navigator.clipboard.writeText(address);
+      if (mounted.current) {
+        setCopyStatus('copied');
+        timer.current = setTimeout(() => setCopyStatus('idle'), 2000);
+      }
+    } catch {
+      if (mounted.current) setCopyStatus('failed');
+    } finally {
+      copying.current = false;
+    }
+  }
+
   return (
-    <section id="contact" className="contact wrap">
+    <section id="contact" className="contact wrap" aria-labelledby="contact-title">
       <div className="contact-top">
         <span className="eyebrow">What’s next?</span>
-        <a className="availability" href={email}>
-          <i />
-          Available for 2027 internships
-        </a>
+        <span className="availability">
+          <i aria-hidden="true" />
+          2027 software engineering internships
+        </span>
       </div>
-      <h2 className="contact-title">
-        Looking for a backend intern?
+      <h2 id="contact-title" className="contact-title">
+        Let’s build something.
         <br />
         <em>Let’s talk.</em>
       </h2>
-      <a className="button email-button" href={email}>
-        rayyan.adhoni@outlook.com <Arrow />
-      </a>
+      <div className="email-actions">
+        <a className="button email-button" href={email}>
+          {address}
+          <Arrow />
+        </a>
+        <button type="button" className="text-button copy-email" onClick={copyEmail}>
+          {copyStatus === 'copied' ? 'Copied' : 'Copy email'}
+        </button>
+      </div>
+      <p className="copy-status" role="status" aria-live="polite">
+        {copyStatus === 'copied'
+          ? 'Email address copied.'
+          : copyStatus === 'failed'
+            ? 'Couldn’t copy automatically. Select and copy the address above.'
+            : ''}
+      </p>
       <div className="contact-links">
         <a
           href="https://www.linkedin.com/in/mohammad-rayyan-adhoni"

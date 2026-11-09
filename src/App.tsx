@@ -3,9 +3,9 @@ import { Hero } from './components/Hero';
 import { Projects } from './components/Projects';
 import { About } from './components/About';
 import { Contact } from './components/Contact';
-import { Certificates } from './components/Certificates';
 import { Brand } from './components/Brand';
 import { Arrow } from './components/portfolio';
+import { Reveal } from './components/Reveal';
 export default function App() {
   return (
     <>
@@ -15,10 +15,15 @@ export default function App() {
       <Navbar />
       <main id="main">
         <Hero />
-        <Projects />
-        <About />
-        <Certificates />
-        <Contact />
+        <Reveal>
+          <About />
+        </Reveal>
+        <Reveal>
+          <Projects />
+        </Reveal>
+        <Reveal>
+          <Contact />
+        </Reveal>
       </main>
       <footer className="wrap">
         <Brand href="#top" />

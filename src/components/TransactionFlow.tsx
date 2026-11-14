@@ -159,29 +159,28 @@ export function TransactionFlow() {
           Technical detail <span aria-hidden="true">+</span>
         </summary>
         <div className="disclosure-body">
-          <p className="content-placeholder">
-            Implementation details below need confirmation against the backend. The
-            simulation uses preset outcomes and makes no network requests.
-          </p>
+          <p>The simulation uses preset outcomes and makes no network requests.</p>
           <ol>
             <li>
-              <strong>Request.</strong> <code>processTransaction</code>, rate limited with
-              Bucket4j. [Confirm current JWT authentication; API-key authentication is
-              planned.]
+              <strong>Request.</strong> <code>processTransaction</code> is authenticated
+              with a JWT in a secure, same-site cookie and rate limited by Bucket4j, with
+              buckets held in Redis. API-key authentication is planned.
             </li>
             <li>
-              <strong>Persistence and event.</strong> PostgreSQL and Kafka. [Confirm
-              write/publish order and the response returned to the bank.]
+              <strong>Persistence and event.</strong> The transaction is saved to
+              PostgreSQL, then published to Kafka. The API returns{' '}
+              <code>201 Created</code> without waiting for the risk check.
             </li>
             <li>
-              <strong>Scoring.</strong> A consumer writes <code>riskScore</code>,{' '}
-              <code>transactionStatus</code> and <code>resolvedAt</code> to a dedicated{' '}
-              <code>RiskManagement</code> record. [Confirm rules, thresholds and the
-              idempotency check for duplicate deliveries.]
+              <strong>Scoring.</strong> A Kafka consumer in the same application uses
+              Redis to check how often the user has transacted and whether the location
+              change is possible. A score above 0.7 flags the transaction. The consumer
+              writes <code>riskScore</code>, <code>transactionStatus</code> and{' '}
+              <code>resolvedAt</code> to a dedicated <code>RiskManagement</code> record.
             </li>
             <li>
               <strong>Dashboard.</strong> Transactions and risk data are shown behind
-              role-based access. [Confirm status names.] Live notifications are deferred.
+              role-based access. Live notifications are deferred.
             </li>
           </ol>
         </div>

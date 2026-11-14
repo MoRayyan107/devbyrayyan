@@ -2,7 +2,7 @@ export function VaultGuardTest() {
   return (
     <section className="load-test" aria-labelledby="load-test-title">
       <span className="eyebrow">Local testing · recorded Locust results</span>
-      <h3 id="load-test-title">What the local test showed.</h3>
+      <h2 id="load-test-title">What the local test showed.</h2>
       <p>
         I tested VaultGuard’s transaction endpoint with Locust, ramping up to 500
         concurrent simulated users. These figures cover the full run, including ramp-up

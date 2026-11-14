@@ -12,13 +12,13 @@ export function Hero() {
         </a>
       </div>
       <h1 id="hero-title">
-        Hi, I’m Rayyan.
-        <br />I build <span>software.</span>
+        I build backend systems in Java, then find out where they <span>break.</span>
       </h1>
       <div className="hero-bottom">
         <p>
-          I’m an MEng Computer Science student at the University of Strathclyde, based in
-          Glasgow and graduating in 2028. My focus is backend development.
+          I’m an MEng Computer Science student at the University of Strathclyde,
+          graduating in 2028. Right now that means event-driven services with Spring Boot
+          and Kafka, and a Java linter for my dissertation.
         </p>
         <div className="hero-actions">
           <a className="button" href="#work">

@@ -38,17 +38,10 @@ export function Contact() {
 
   return (
     <section id="contact" className="contact wrap" aria-labelledby="contact-title">
-      <div className="contact-top">
-        <span className="eyebrow">What’s next?</span>
-        <span className="availability">
-          <i aria-hidden="true" />
-          2027 software engineering internships
-        </span>
-      </div>
       <h2 id="contact-title" className="contact-title">
-        Let’s build something.
+        Hiring an intern for 2027?
         <br />
-        <em>Let’s talk.</em>
+        <em>Email me.</em>
       </h2>
       <div className="email-actions">
         <a className="button email-button" href={email}>

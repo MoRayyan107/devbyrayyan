@@ -12,8 +12,6 @@ export default defineConfig({
       input: {
         home: fileURLToPath(new URL('./index.html', import.meta.url)),
         vaultguard: fileURLToPath(new URL('./vaultguard.html', import.meta.url)),
-        zeroHour: fileURLToPath(new URL('./zero-hour.html', import.meta.url)),
-        duckRun: fileURLToPath(new URL('./duck-run.html', import.meta.url)),
       },
     },
   },

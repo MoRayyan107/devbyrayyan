@@ -99,36 +99,17 @@ try {
     assert.equal(await page.locator('vite-error-overlay').count(), 0);
     await page.getByRole('link', { name: 'Back to work', exact: true }).click();
     await page.waitForURL('**/devbyrayyan/#vaultguard');
-    for (const project of [
-      { slug: 'zero-hour', name: 'Zero Hour' },
-      { slug: 'duck-run', name: 'Duck Run' },
-    ]) {
-      await page
-        .getByRole('link', { name: `About ${project.name}`, exact: true })
-        .click();
-      await page.waitForURL(`**/${project.slug}.html`);
-      await page.reload();
-      assert.equal(
-        await page.getByRole('heading', { level: 1 }).innerText(),
-        `${project.name}.`,
-      );
-      await checkOverflow(page, width);
+    // The game write-ups live on the homepage; their old pages were removed.
+    for (const name of ['Zero Hour', 'Duck Run']) {
       assert.equal(
         await page
-          .getByRole('link', { name: `Play ${project.name}`, exact: true })
+          .getByRole('link', { name: `Play ${name} in a new tab`, exact: true })
           .getAttribute('target'),
         '_blank',
       );
-      if (width === 390) {
-        await page.screenshot({
-          path: `node_modules/.cache/${project.slug}-mobile.png`,
-          fullPage: true,
-        });
-      }
-      await page.getByRole('link', { name: 'Back to work', exact: true }).click();
-      await page.waitForURL(`**/devbyrayyan/#${project.slug}`);
-      assert.equal(await page.locator(`#${project.slug}`).count(), 1);
     }
+    assert.equal(await page.locator('a[href$="zero-hour.html"]').count(), 0);
+    assert.equal(await page.locator('a[href$="duck-run.html"]').count(), 0);
     for (const href of await page
       .locator('a[download]')
       .evaluateAll((links) => links.map((a) => a.href))) {
@@ -144,7 +125,7 @@ try {
         'Homepage should be at least 25% shorter than the previous version',
       );
     }
-    console.log(`${width}px: homepage, three project pages, navigation, and CV passed`);
+    console.log(`${width}px: homepage, case study, navigation, and CV passed`);
   }
 
   await page.setViewportSize({ width: 390, height: 844 });

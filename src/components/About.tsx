@@ -4,7 +4,6 @@ export function About() {
   return (
     <section id="about" className="about wrap" aria-labelledby="about-title">
       <div className="about-heading">
-        <span className="eyebrow">A little about me</span>
         <h2 id="about-title">
           How I like
           <br />

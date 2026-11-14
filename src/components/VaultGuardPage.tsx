@@ -3,6 +3,7 @@ import { Arrow, Tags } from './portfolio';
 import { github } from './portfolioData';
 import { Brand } from './Brand';
 import { TransactionFlow } from './TransactionFlow';
+import { VaultGuardArchitecture } from './VaultGuardArchitecture';
 
 const home = import.meta.env.BASE_URL;
 
@@ -58,16 +59,17 @@ export function VaultGuardPage() {
             <span className="eyebrow">The approach</span>
             <h2>Separate the work.</h2>
             <p>
-              The project uses Spring Boot, Kafka and PostgreSQL to explore event-driven
-              risk checking, with a role-based dashboard for reviewing transaction and
-              risk data.
+              A single Spring Boot application uses PostgreSQL, Kafka and Redis to explore
+              event-driven risk checking, with a role-based dashboard for reviewing
+              transaction and risk data.
             </p>
             <p>
-              Live notifications are deferred. The interaction below is a labelled
-              simulation of the flow.
+              Live notifications are deferred. Further down, an interactive simulation
+              follows one payment through the flow.
             </p>
           </div>
         </section>
+        <VaultGuardArchitecture />
         <section id="transaction-flow" className="case-flow" aria-labelledby="flow-title">
           <div className="case-flow-intro">
             <span className="eyebrow">Follow a transaction</span>

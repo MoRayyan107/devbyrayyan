@@ -1,0 +1,1 @@
+import{d as e,l as t,r as n,u as r}from"./portfolioData-DOfjjoB4.js";import{t as i}from"./GameProjectPage-DT5rnl-s.js";var a=e(),o=r(),s=t();(0,o.createRoot)(document.getElementById(`root`)).render((0,s.jsx)(a.StrictMode,{children:(0,s.jsx)(i,{game:n[1]})}));
